@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CoreLocation
+import MapKit
 
 struct ContentView: View {
     @StateObject var userLocationViewModel = UserLocationViewModel()
@@ -23,9 +23,9 @@ struct ContentView: View {
     let locationManager = CLLocationManager()
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
 

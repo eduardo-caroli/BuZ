@@ -14,8 +14,17 @@
 		AF6C54FC28EE2C7D005EEE2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C54FB28EE2C7D005EEE2B /* ContentView.swift */; };
 		AF6C54FE28EE2C80005EEE2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */; };
 		AF6C550128EE2C80005EEE2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */; };
-		E5DA0E4728F6116B00D99780 /* View in Resources */ = {isa = PBXBuildFile; fileRef = E5DA0E4628F6116B00D99780 /* View */; };
 		E5DA0E4928F6142500D99780 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4828F6142500D99780 /* Menu.swift */; };
+		E5DA0E5528F615AA00D99780 /* Pra onde vc vai.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5428F615AA00D99780 /* Pra onde vc vai.swift */; };
+		E5DA0E5628F615AA00D99780 /* ConfirmarOnibus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4F28F615AA00D99780 /* ConfirmarOnibus.swift */; };
+		E5DA0E5728F615AA00D99780 /* Aguarde.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5228F615AA00D99780 /* Aguarde.swift */; };
+		E5DA0E5828F615AA00D99780 /* MelhorTrajeto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5328F615AA00D99780 /* MelhorTrajeto.swift */; };
+		E5DA0E5928F615AA00D99780 /* Tela6.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4B28F615A900D99780 /* Tela6.swift */; };
+		E5DA0E5A28F615AA00D99780 /* Tela8.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4C28F615AA00D99780 /* Tela8.swift */; };
+		E5DA0E5B28F615AA00D99780 /* Tela7.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5028F615AA00D99780 /* Tela7.swift */; };
+		E5DA0E5C28F615AA00D99780 /* Todas as opções.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4D28F615AA00D99780 /* Todas as opções.swift */; };
+		E5DA0E5D28F615AA00D99780 /* Proximo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4E28F615AA00D99780 /* Proximo.swift */; };
+		E5DA0E5E28F615AA00D99780 /* BuscaOnibus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5128F615AA00D99780 /* BuscaOnibus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +36,17 @@
 		AF6C54FB28EE2C7D005EEE2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E5DA0E4628F6116B00D99780 /* View */ = {isa = PBXFileReference; lastKnownFileType = folder; name = View; path = Model/View; sourceTree = "<group>"; };
 		E5DA0E4828F6142500D99780 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		E5DA0E4B28F615A900D99780 /* Tela6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela6.swift; sourceTree = "<group>"; };
+		E5DA0E4C28F615AA00D99780 /* Tela8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela8.swift; sourceTree = "<group>"; };
+		E5DA0E4D28F615AA00D99780 /* Todas as opções.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todas as opções.swift"; sourceTree = "<group>"; };
+		E5DA0E4E28F615AA00D99780 /* Proximo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proximo.swift; sourceTree = "<group>"; };
+		E5DA0E4F28F615AA00D99780 /* ConfirmarOnibus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmarOnibus.swift; sourceTree = "<group>"; };
+		E5DA0E5028F615AA00D99780 /* Tela7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela7.swift; sourceTree = "<group>"; };
+		E5DA0E5128F615AA00D99780 /* BuscaOnibus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscaOnibus.swift; sourceTree = "<group>"; };
+		E5DA0E5228F615AA00D99780 /* Aguarde.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aguarde.swift; sourceTree = "<group>"; };
+		E5DA0E5328F615AA00D99780 /* MelhorTrajeto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelhorTrajeto.swift; sourceTree = "<group>"; };
+		E5DA0E5428F615AA00D99780 /* Pra onde vc vai.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pra onde vc vai.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				AF6C54F928EE2C7D005EEE2B /* BuZApp.swift */,
-				E5DA0E4828F6142500D99780 /* Menu.swift */,
 				AF6C54FB28EE2C7D005EEE2B /* ContentView.swift */,
-				E5DA0E4628F6116B00D99780 /* View */,
+				E5DA0E4A28F6158800D99780 /* ViewJoana */,
 				AF48D2A328EFBEE10004599F /* ViewModel */,
 				AF48D2A628EFBEF60004599F /* Model */,
 				AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */,
@@ -96,6 +113,24 @@
 				AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E5DA0E4A28F6158800D99780 /* ViewJoana */ = {
+			isa = PBXGroup;
+			children = (
+				E5DA0E4828F6142500D99780 /* Menu.swift */,
+				E5DA0E5228F615AA00D99780 /* Aguarde.swift */,
+				E5DA0E5128F615AA00D99780 /* BuscaOnibus.swift */,
+				E5DA0E4F28F615AA00D99780 /* ConfirmarOnibus.swift */,
+				E5DA0E5328F615AA00D99780 /* MelhorTrajeto.swift */,
+				E5DA0E5428F615AA00D99780 /* Pra onde vc vai.swift */,
+				E5DA0E4E28F615AA00D99780 /* Proximo.swift */,
+				E5DA0E4B28F615A900D99780 /* Tela6.swift */,
+				E5DA0E5028F615AA00D99780 /* Tela7.swift */,
+				E5DA0E4C28F615AA00D99780 /* Tela8.swift */,
+				E5DA0E4D28F615AA00D99780 /* Todas as opções.swift */,
+			);
+			path = ViewJoana;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,7 +193,6 @@
 			files = (
 				AF6C550128EE2C80005EEE2B /* Preview Assets.xcassets in Resources */,
 				AF6C54FE28EE2C80005EEE2B /* Assets.xcassets in Resources */,
-				E5DA0E4728F6116B00D99780 /* View in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,12 +203,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5DA0E5528F615AA00D99780 /* Pra onde vc vai.swift in Sources */,
+				E5DA0E5628F615AA00D99780 /* ConfirmarOnibus.swift in Sources */,
+				E5DA0E5C28F615AA00D99780 /* Todas as opções.swift in Sources */,
 				E5DA0E4928F6142500D99780 /* Menu.swift in Sources */,
 				AF48D2A528EFBEEE0004599F /* Bus.swift in Sources */,
+				E5DA0E5B28F615AA00D99780 /* Tela7.swift in Sources */,
+				E5DA0E5A28F615AA00D99780 /* Tela8.swift in Sources */,
+				E5DA0E5828F615AA00D99780 /* MelhorTrajeto.swift in Sources */,
 				AF48D29628EFA3850004599F /* UserLocationViewModel.swift in Sources */,
+				E5DA0E5928F615AA00D99780 /* Tela6.swift in Sources */,
+				E5DA0E5E28F615AA00D99780 /* BuscaOnibus.swift in Sources */,
 				AF6C54FC28EE2C7D005EEE2B /* ContentView.swift in Sources */,
+				E5DA0E5728F615AA00D99780 /* Aguarde.swift in Sources */,
 				AF48D2A228EFBEB30004599F /* BusLocationViewModel.swift in Sources */,
 				AF6C54FA28EE2C7D005EEE2B /* BuZApp.swift in Sources */,
+				E5DA0E5D28F615AA00D99780 /* Proximo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
