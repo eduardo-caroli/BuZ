@@ -6,12 +6,21 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct ContentView: View {
+    @StateObject var userLocationViewModel = UserLocationViewModel()
+    @StateObject var busLocationViewModel = BusLocationViewModel()
     var body: some View {
-        Text("Hello, world!")
+        Text("""
+            latitude: \(busLocationViewModel.closestBus?.latitude ?? "no longitude")\n
+        longitude: \(busLocationViewModel.closestBus?.longitude ?? "no longitude")
+        """)
             .padding()
+        Text("ordem: \(busLocationViewModel.desiredBuses.first?.ordem ?? "nil") \(Date())")
+        TextField("Linha de Ônibus", text: $busLocationViewModel.line)
     }
+    let locationManager = CLLocationManager()
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -19,3 +28,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
