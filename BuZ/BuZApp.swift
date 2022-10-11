@@ -11,7 +11,7 @@ import SwiftUI
 struct BuZApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Menu()
         }
     }
 }

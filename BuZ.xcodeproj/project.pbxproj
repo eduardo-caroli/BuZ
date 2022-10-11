@@ -15,6 +15,7 @@
 		AF6C54FE28EE2C80005EEE2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */; };
 		AF6C550128EE2C80005EEE2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */; };
 		E5DA0E4728F6116B00D99780 /* View in Resources */ = {isa = PBXBuildFile; fileRef = E5DA0E4628F6116B00D99780 /* View */; };
+		E5DA0E4928F6142500D99780 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4828F6142500D99780 /* Menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5DA0E4628F6116B00D99780 /* View */ = {isa = PBXFileReference; lastKnownFileType = folder; name = View; path = Model/View; sourceTree = "<group>"; };
+		E5DA0E4828F6142500D99780 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +79,10 @@
 			isa = PBXGroup;
 			children = (
 				AF6C54F928EE2C7D005EEE2B /* BuZApp.swift */,
+				E5DA0E4828F6142500D99780 /* Menu.swift */,
 				AF6C54FB28EE2C7D005EEE2B /* ContentView.swift */,
-				AF48D2A328EFBEE10004599F /* ViewModel */,
 				E5DA0E4628F6116B00D99780 /* View */,
+				AF48D2A328EFBEE10004599F /* ViewModel */,
 				AF48D2A628EFBEF60004599F /* Model */,
 				AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */,
 				AF6C54FF28EE2C80005EEE2B /* Preview Content */,
@@ -166,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5DA0E4928F6142500D99780 /* Menu.swift in Sources */,
 				AF48D2A528EFBEEE0004599F /* Bus.swift in Sources */,
 				AF48D29628EFA3850004599F /* UserLocationViewModel.swift in Sources */,
 				AF6C54FC28EE2C7D005EEE2B /* ContentView.swift in Sources */,
