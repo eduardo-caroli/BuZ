@@ -14,7 +14,7 @@ struct Tela6: View {
             Color.black .ignoresSafeArea()
             
             Circle()
-                .foregroundColor(.blue)
+                .foregroundColor(Color.black)
                 .padding(30)
             Circle()
                 .foregroundColor(.mint)
@@ -22,7 +22,7 @@ struct Tela6: View {
             Circle()
                 .foregroundColor(.cyan)
                 .padding(60)
-            Text ("Fique atento! \n O próximo ônibus é o **107**")
+            Text ("Fique atento!\n o próximo ônibus\n é o **107**")
                 .multilineTextAlignment(.center)
                 .foregroundColor(.black)
                 .font(.largeTitle)

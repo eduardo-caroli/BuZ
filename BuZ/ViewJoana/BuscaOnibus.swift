@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BuscaOnibus: View {
+    @StateObject var busLocationViewModel = BusLocationViewModel()
     @State var buscar:String = ""
     @State var didPressEnter: Bool = false
     var body: some View {
@@ -40,7 +41,8 @@ struct BuscaOnibus: View {
                 
                 TextField ("Buscar...",text: $buscar) .onSubmit {
                     // updates `didPressEnter` to present next view
-                   
+
+                    busLocationViewModel.line = buscar
                     didPressEnter = true
                 }
                 .font(.subheadline)
