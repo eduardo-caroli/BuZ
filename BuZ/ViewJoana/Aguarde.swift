@@ -15,19 +15,6 @@ struct Aguarde: View {
         ZStack {
             Color.black .ignoresSafeArea()
             VStack {
-                
-//                Button {
-//                    print("ola gabriel")
-//                } label: {
-//                    Text("Voltar")
-//                        .font(.subheadline)
-//                        .frame(width: 65, height: 40)
-//                }.buttonStyle(.borderedProminent)
-//                    .foregroundColor(.white)
-//                    .tint(Color.gray)
-//                    .frame(maxWidth: .infinity, alignment: .leading)
-//                    .padding(.top, 10)
-//                    .padding(.leading, 10)
                 Spacer()
                 
                 Text("Aguarde o **107**\nEm: UFRJ - Praia Vermalha\nEle chegará em 5min")

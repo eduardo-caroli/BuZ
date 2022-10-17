@@ -49,15 +49,6 @@ class BusLocationViewModel: ObservableObject{
                 })
         }
     }
-    
-//    func getBuses(){
-//
-//        Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { _ in
-//            self.callAPI()
-//        }
-//
-//
-//    }
 }
 
 

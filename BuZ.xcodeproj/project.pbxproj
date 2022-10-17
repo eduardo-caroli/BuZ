@@ -11,7 +11,6 @@
 		AF48D2A228EFBEB30004599F /* BusLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48D2A128EFBEB30004599F /* BusLocationViewModel.swift */; };
 		AF48D2A528EFBEEE0004599F /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48D2A428EFBEEE0004599F /* Bus.swift */; };
 		AF6C54FA28EE2C7D005EEE2B /* BuZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C54F928EE2C7D005EEE2B /* BuZApp.swift */; };
-		AF6C54FC28EE2C7D005EEE2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C54FB28EE2C7D005EEE2B /* ContentView.swift */; };
 		AF6C54FE28EE2C80005EEE2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */; };
 		AF6C550128EE2C80005EEE2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */; };
 		E5DA0E4928F6142500D99780 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4828F6142500D99780 /* MenuView.swift */; };
@@ -33,7 +32,6 @@
 		AF48D2A428EFBEEE0004599F /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
 		AF6C54F628EE2C7D005EEE2B /* BuZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6C54F928EE2C7D005EEE2B /* BuZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuZApp.swift; sourceTree = "<group>"; };
-		AF6C54FB28EE2C7D005EEE2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5DA0E4828F6142500D99780 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				AF6C54F928EE2C7D005EEE2B /* BuZApp.swift */,
-				AF6C54FB28EE2C7D005EEE2B /* ContentView.swift */,
 				E5DA0E4A28F6158800D99780 /* ViewJoana */,
 				AF48D2A328EFBEE10004599F /* ViewModel */,
 				AF48D2A628EFBEF60004599F /* Model */,
@@ -214,7 +211,6 @@
 				AF48D29628EFA3850004599F /* UserLocationViewModel.swift in Sources */,
 				E5DA0E5928F615AA00D99780 /* Tela6.swift in Sources */,
 				E5DA0E5E28F615AA00D99780 /* BuscaOnibus.swift in Sources */,
-				AF6C54FC28EE2C7D005EEE2B /* ContentView.swift in Sources */,
 				E5DA0E5728F615AA00D99780 /* Aguarde.swift in Sources */,
 				AF48D2A228EFBEB30004599F /* BusLocationViewModel.swift in Sources */,
 				AF6C54FA28EE2C7D005EEE2B /* BuZApp.swift in Sources */,
