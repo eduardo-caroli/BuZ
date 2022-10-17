@@ -11,7 +11,9 @@ import SwiftUI
 struct BuZApp: App {
     var body: some Scene {
         WindowGroup {
-            BuscaOnibus()
+            NavigationView {
+                BuscaOnibus()
+            }
         }
     }
 }

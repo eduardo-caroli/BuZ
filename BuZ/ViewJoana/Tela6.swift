@@ -22,7 +22,7 @@ struct Tela6: View {
             Circle()
                 .foregroundColor(.cyan)
                 .padding(60)
-            Text ("O **107** \nEstá chegando\nFaça sinal")
+            Text ("Fique atento! \n O próximo ônibus é o **107**")
                 .multilineTextAlignment(.center)
                 .foregroundColor(.black)
                 .font(.largeTitle)

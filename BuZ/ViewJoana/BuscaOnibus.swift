@@ -40,6 +40,7 @@ struct BuscaOnibus: View {
                 
                 TextField ("Buscar...",text: $buscar) .onSubmit {
                     // updates `didPressEnter` to present next view
+                   
                     didPressEnter = true
                 }
                 .font(.subheadline)

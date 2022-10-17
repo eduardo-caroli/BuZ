@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Menu: View {
     var body: some View {
-        NavigationView {
+        
              ZStack {
                  Color.black .ignoresSafeArea()
                  VStack {
@@ -59,7 +59,7 @@ struct Menu: View {
 //                        .foregroundColor(.white)
 //                        .tint(Color.gray)
                 }.padding()
-            }
+            
              
             
         }.ignoresSafeArea()
