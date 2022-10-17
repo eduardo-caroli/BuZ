@@ -35,6 +35,8 @@ struct Aguarde: View {
                     .foregroundColor(.white)
                     .font(.title)
                     .lineSpacing(10)
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom, 110)
                 Spacer()
             }
         }

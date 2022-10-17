@@ -29,10 +29,10 @@ struct ConfirmarOnibus: View {
                 //                    .padding(.leading, 10)
                 Spacer()
                 
-                Text("O 107\n Chegará no ponto da UFRJ em:\n 5min")
+                Text("O **107** \nChegará no ponto: \n UFRJ - Praia Vermelha em: **5min**")
                     .font(.title)
                     .foregroundColor(.white)
-                    .padding(.horizontal)
+                    .padding(40)
                     .multilineTextAlignment(.center)
                 
                 NavigationLink{
@@ -43,10 +43,11 @@ struct ConfirmarOnibus: View {
                         .frame(width: 280, height: 70)
                 }.buttonStyle(.borderedProminent)
                     .foregroundColor(.black)
-                    .tint(Color.cyan)
+                    .tint(Color(red: 181/255, green: 215/255, blue: 255/255))
+                 
                 
                 NavigationLink{
-                    Menu()
+                    BuscaOnibus()
                 } label: {
                     Text("Cancelar")
                         .font(.title)
@@ -54,6 +55,7 @@ struct ConfirmarOnibus: View {
                 }.buttonStyle(.borderedProminent)
                     .foregroundColor(.white)
                     .tint(Color.gray)
+                    .padding(.bottom, 170)
                 Spacer()
             }
         }
