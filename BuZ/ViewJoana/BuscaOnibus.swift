@@ -34,7 +34,7 @@ struct BuscaOnibus: View {
 //                    .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 10)
 
-                NavigationLink(destination: MelhorTrajeto(), isActive: $didPressEnter) {
+                NavigationLink(destination: ConfirmarOnibus(), isActive: $didPressEnter) {
                     EmptyView()
                 }
                 
