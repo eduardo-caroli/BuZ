@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Aguarde: View {
     
+     
     @State var isWaiting: Bool = true
     
     var waitingView: some View {
@@ -36,6 +37,8 @@ struct Aguarde: View {
         } else {
             Tela6()
         }
+        
+        
     }
     
     func wait(seconds: Int) {

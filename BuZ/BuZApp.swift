@@ -12,7 +12,7 @@ struct BuZApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                BuscaOnibus()
+                Menu()
             }
         }
     }

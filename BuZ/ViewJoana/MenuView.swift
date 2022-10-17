@@ -33,6 +33,7 @@ struct Menu: View {
              
             
         }.ignoresSafeArea()
+            .navigationBarBackButtonHidden(true)
         
     }
 }
