@@ -22,7 +22,7 @@ struct ConfirmarOnibus: View {
                 Text("O \(busLocationDAO.line) chegará em \(busLocationDAO.closestBus!.ordem)")
                     .font(.title)
                     .foregroundColor(.white)
-                    .padding(.horizontal)
+                    .padding(40)
                     .multilineTextAlignment(.center)
                 
                 NavigationLink{
@@ -33,10 +33,11 @@ struct ConfirmarOnibus: View {
                         .frame(width: 280, height: 70)
                 }.buttonStyle(.borderedProminent)
                     .foregroundColor(.black)
-                    .tint(Color.cyan)
+                    .tint(Color(red: 181/255, green: 215/255, blue: 255/255))
+                 
                 
                 NavigationLink{
-                    Menu()
+                    BuscaOnibus()
                 } label: {
                     Text("Cancelar")
                         .font(.title)
@@ -44,6 +45,7 @@ struct ConfirmarOnibus: View {
                 }.buttonStyle(.borderedProminent)
                     .foregroundColor(.white)
                     .tint(Color.gray)
+                    .padding(.bottom, 170)
                 Spacer()
             }
         }

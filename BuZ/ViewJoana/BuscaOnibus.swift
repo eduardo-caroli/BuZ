@@ -11,18 +11,50 @@ struct BuscaOnibus: View {
     @EnvironmentObject var busLocationDAO: BusLocationDAO
     @State var buscar:String = ""
     @State var didPressEnter: Bool = false
+    
     var body: some View {
         ZStack {
             Color.black .ignoresSafeArea()
             VStack {
+               
+//                Button {
+//                    print("ola gabriel")
+//                } label: {
+//                    Text("Voltar")
+//                        .font(.subheadline)
+//                        .frame(width: 65, height: 40)
+//                }.buttonStyle(.borderedProminent)
+//                    .foregroundColor(.white)
+//                    .tint(Color.gray)
+//                    .frame(maxWidth: .infinity, alignment: .leading)
+//                    .padding(.top, 10)
+//                    .padding(.leading, 10)
                 Spacer()
                 Text("Qual o seu ônibus?")
                     .font(.title)
                     .foregroundColor(.white)
                     .padding(.leading, 10)
-
-                NavigationLink(destination: ConfirmarOnibus(), isActive: $didPressEnter) {
-                    EmptyView()
+                    .padding(.leading, 10)
+                    .textFieldStyle(.plain)
+                    .background(Color.gray)
+                    
+                    .cornerRadius(20)
+                    //                NavigationLink {
+                    //                    ConfirmarOnibus()
+                    //                } label: {
+                    //                    Text("Buscar")
+                    //                        .font(.subheadline)
+                    //                        .frame(width: 300, height: 50, alignment: .leading)
+                    //                        .padding(.leading, 10)
+                    //
+                    //
+                    //                }.buttonStyle(.borderedProminent)
+                    //                    .foregroundColor(.white)
+                    //                    .tint(Color.gray)
+                    //                    .frame(maxWidth: .infinity, alignment: .leading)
+                    //                    .padding(.leading, 10)
+                    .padding(.bottom,350)
+                    Spacer()
                 }
                 
                 TextField ("Buscar...",text: $buscar) .onSubmit {
@@ -39,9 +71,24 @@ struct BuscaOnibus: View {
                 .textFieldStyle(.plain)
                 .background(Color.gray)
                 .cornerRadius(20)
+//                NavigationLink {
+//                    ConfirmarOnibus()
+//                } label: {
+//                    Text("Buscar")
+//                        .font(.subheadline)
+//                        .frame(width: 300, height: 50, alignment: .leading)
+//                        .padding(.leading, 10)
+//
+//
+//                }.buttonStyle(.borderedProminent)
+//                    .foregroundColor(.white)
+//                    .tint(Color.gray)
+//                    .frame(maxWidth: .infinity, alignment: .leading)
+//                    .padding(.leading, 10)
 
                 Spacer()
             }
+            
         }
     }
 }
