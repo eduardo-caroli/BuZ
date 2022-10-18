@@ -41,7 +41,7 @@ struct BuscaOnibus: View {
                         .font(.title)
                         .foregroundColor(.white)
                     //                    .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.bottom, 30)
+                        .padding(.bottom, geometry.size.height / 30)
                     
                     
                     NavigationLink(destination: ConfirmarOnibus(), isActive: $didPressEnter) {
@@ -81,7 +81,7 @@ struct BuscaOnibus: View {
                     //                    .tint(Color.gray)
                     //                    .frame(maxWidth: .infinity, alignment: .leading)
                     //                    .padding(.leading, 10)
-                    .padding(.bottom,350)
+                    .padding(.bottom, geometry.size.height / 10)
                     Spacer()
                 }
                 .padding(.top, geometry.size.height / 10)
