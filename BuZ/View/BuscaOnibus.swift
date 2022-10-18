@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct BuscaOnibus: View {
+    @EnvironmentObject var busLocationDAO: BusLocationDAO
     @State var buscar:String = ""
     @State var didPressEnter: Bool = false
+    
     var body: some View {
         ZStack {
             Color.black .ignoresSafeArea()
@@ -31,15 +33,33 @@ struct BuscaOnibus: View {
                 Text("Qual o seu ônibus?")
                     .font(.title)
                     .foregroundColor(.white)
-//                    .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 10)
-
-                NavigationLink(destination: MelhorTrajeto(), isActive: $didPressEnter) {
-                    EmptyView()
+                    .padding(.leading, 10)
+                    .textFieldStyle(.plain)
+                    .background(Color.gray)
+                    
+                    .cornerRadius(20)
+                    //                NavigationLink {
+                    //                    ConfirmarOnibus()
+                    //                } label: {
+                    //                    Text("Buscar")
+                    //                        .font(.subheadline)
+                    //                        .frame(width: 300, height: 50, alignment: .leading)
+                    //                        .padding(.leading, 10)
+                    //
+                    //
+                    //                }.buttonStyle(.borderedProminent)
+                    //                    .foregroundColor(.white)
+                    //                    .tint(Color.gray)
+                    //                    .frame(maxWidth: .infinity, alignment: .leading)
+                    //                    .padding(.leading, 10)
+                    .padding(.bottom,350)
+                    Spacer()
                 }
                 
                 TextField ("Buscar...",text: $buscar) .onSubmit {
                     // updates `didPressEnter` to present next view
+                    busLocationDAO.line = buscar
                     didPressEnter = true
                 }
                 .font(.subheadline)
@@ -68,6 +88,7 @@ struct BuscaOnibus: View {
 
                 Spacer()
             }
+            
         }
     }
 }
@@ -76,3 +97,5 @@ struct Tela_6_Previews: PreviewProvider {
         BuscaOnibus()
     }
 }
+
+ 
