@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BuscaOnibus: View {
-    @StateObject var busLocationViewModel = BusLocationViewModel()
+    @EnvironmentObject var busLocationDAO: BusLocationDAO
     @State var buscar:String = ""
     @State var didPressEnter: Bool = false
     var body: some View {
@@ -19,7 +19,6 @@ struct BuscaOnibus: View {
                 Text("Qual o seu ônibus?")
                     .font(.title)
                     .foregroundColor(.white)
-//                    .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 10)
 
                 NavigationLink(destination: ConfirmarOnibus(), isActive: $didPressEnter) {
@@ -28,8 +27,7 @@ struct BuscaOnibus: View {
                 
                 TextField ("Buscar...",text: $buscar) .onSubmit {
                     // updates `didPressEnter` to present next view
-
-                    busLocationViewModel.line = buscar
+                    busLocationDAO.line = buscar
                     didPressEnter = true
                 }
                 .font(.subheadline)
@@ -52,3 +50,5 @@ struct Tela_6_Previews: PreviewProvider {
         BuscaOnibus()
     }
 }
+
+ 
