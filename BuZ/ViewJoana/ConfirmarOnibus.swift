@@ -54,7 +54,7 @@ struct ConfirmarOnibus: View {
                         .frame(width: 280, height: 70)
                 }.buttonStyle(.borderedProminent)
                     .foregroundColor(.white)
-                    .tint(Color.gray)
+                    .tint(Color(red: 28/255, green: 28/255, blue: 28/255))
                     .padding(.bottom, 170)
                 Spacer()
             }

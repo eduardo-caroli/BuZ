@@ -19,9 +19,10 @@ struct BuscaOnibus: View {
                 VStack {
                     
                     Text("BuZ")
-                        .font (.system(size: 80,weight: .bold, design: .rounded))
+                        .font (.system(size: 80,weight: .bold, design: .serif))
                         .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255))
-                        .padding (.bottom, 150)
+                        .padding (.bottom, geometry.size.height / 6)
+                 
                     
                     
                     //                Button {
@@ -64,7 +65,7 @@ struct BuscaOnibus: View {
                     .padding(.leading, 10)
                     .padding(.leading, 10)
                     .textFieldStyle(.plain)
-                    .background(Color.gray)
+                    .background(Color(red: 28/255, green: 28/255, blue: 28/255))
                     
                     .cornerRadius(20)
                     //                NavigationLink {
@@ -84,7 +85,7 @@ struct BuscaOnibus: View {
                     .padding(.bottom, geometry.size.height / 10)
                     Spacer()
                 }
-                .padding(.top, geometry.size.height / 10)
+                .padding(.top, geometry.size.height / 27)
             }
             
         }
