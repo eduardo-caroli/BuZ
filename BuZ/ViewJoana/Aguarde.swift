@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Aguarde: View {
     
-     
+    @EnvironmentObject var busLocationDAO: BusLocationDAO
     @State var isWaiting: Bool = true
     
     var waitingView: some View {
@@ -18,7 +18,7 @@ struct Aguarde: View {
             VStack {
                 Spacer()
                 
-                Text("Aguarde o **107**\nEm: UFRJ - Praia Vermalha\nEle chegará em 5min")
+                Text("Aguare o \(busLocationDAO.line).\nEle chegará em \(busLocationDAO.closestBus!.ordem)")
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
                     .font(.title)

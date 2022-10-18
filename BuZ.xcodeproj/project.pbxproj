@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0A925D28FF208000EC62D9 /* BusLocationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A925C28FF208000EC62D9 /* BusLocationDAO.swift */; };
 		AF48D29628EFA3850004599F /* UserLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48D29528EFA3850004599F /* UserLocationViewModel.swift */; };
-		AF48D2A228EFBEB30004599F /* BusLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48D2A128EFBEB30004599F /* BusLocationViewModel.swift */; };
 		AF48D2A528EFBEEE0004599F /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48D2A428EFBEEE0004599F /* Bus.swift */; };
 		AF6C54FA28EE2C7D005EEE2B /* BuZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C54F928EE2C7D005EEE2B /* BuZApp.swift */; };
 		AF6C54FE28EE2C80005EEE2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */; };
@@ -27,8 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF0A925C28FF208000EC62D9 /* BusLocationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusLocationDAO.swift; sourceTree = "<group>"; };
 		AF48D29528EFA3850004599F /* UserLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationViewModel.swift; sourceTree = "<group>"; };
-		AF48D2A128EFBEB30004599F /* BusLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusLocationViewModel.swift; sourceTree = "<group>"; };
 		AF48D2A428EFBEEE0004599F /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
 		AF6C54F628EE2C7D005EEE2B /* BuZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6C54F928EE2C7D005EEE2B /* BuZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuZApp.swift; sourceTree = "<group>"; };
@@ -58,11 +58,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF0A925E28FF208600EC62D9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AF0A925C28FF208000EC62D9 /* BusLocationDAO.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		AF48D2A328EFBEE10004599F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				AF48D29528EFA3850004599F /* UserLocationViewModel.swift */,
-				AF48D2A128EFBEB30004599F /* BusLocationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -100,6 +107,7 @@
 				AF48D2A628EFBEF60004599F /* Model */,
 				AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */,
 				AF6C54FF28EE2C80005EEE2B /* Preview Content */,
+				AF0A925E28FF208600EC62D9 /* Services */,
 			);
 			path = BuZ;
 			sourceTree = "<group>";
@@ -206,13 +214,13 @@
 				E5DA0E4928F6142500D99780 /* MenuView.swift in Sources */,
 				AF48D2A528EFBEEE0004599F /* Bus.swift in Sources */,
 				E5DA0E5B28F615AA00D99780 /* Tela7.swift in Sources */,
+				AF0A925D28FF208000EC62D9 /* BusLocationDAO.swift in Sources */,
 				E5DA0E5A28F615AA00D99780 /* Tela8.swift in Sources */,
 				E5DA0E5828F615AA00D99780 /* MelhorTrajeto.swift in Sources */,
 				AF48D29628EFA3850004599F /* UserLocationViewModel.swift in Sources */,
 				E5DA0E5928F615AA00D99780 /* Tela6.swift in Sources */,
 				E5DA0E5E28F615AA00D99780 /* BuscaOnibus.swift in Sources */,
 				E5DA0E5728F615AA00D99780 /* Aguarde.swift in Sources */,
-				AF48D2A228EFBEB30004599F /* BusLocationViewModel.swift in Sources */,
 				AF6C54FA28EE2C7D005EEE2B /* BuZApp.swift in Sources */,
 				E5DA0E5D28F615AA00D99780 /* Proximo.swift in Sources */,
 			);

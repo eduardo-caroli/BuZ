@@ -9,6 +9,9 @@ import SwiftUI
 
 
 struct ConfirmarOnibus: View {
+    
+    @EnvironmentObject var busLocationDAO: BusLocationDAO
+    
     var body: some View {
         ZStack {
             Color.black
@@ -16,7 +19,7 @@ struct ConfirmarOnibus: View {
             VStack {
                 Spacer()
                 
-                Text("O **107** \nChegará no ponto: \n UFRJ - Praia Vermelha em: **5min**")
+                Text("O \(busLocationDAO.line) chegará em \(busLocationDAO.closestBus!.ordem)")
                     .font(.title)
                     .foregroundColor(.white)
                     .padding(40)
