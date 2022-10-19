@@ -52,7 +52,7 @@ struct BuscaOnibus: View {
                         
                     }
                     
-                    TextField ("Buscar...",text: $buscar) .onSubmit {
+                    TextField ("Buscar...",text: $buscar ) .onSubmit {
                         // updates `didPressEnter` to present next view
                         
                         busLocationDAO.line = buscar
@@ -60,16 +60,16 @@ struct BuscaOnibus: View {
                         
                         
                     }
-                    .font(.subheadline)
+                    .font(.title2)
                     .foregroundColor(.white)
                     .tint(Color.white)
                     .frame(width: 300, height: 50, alignment: .leading)
-                    .padding(.leading, 10)
-                    .padding(.leading, 10)
+                    .padding(.leading, 20)
+                    .padding(.leading, 20)
                     .textFieldStyle(.plain)
                     .background(Color(red: 28/255, green: 28/255, blue: 28/255))
                     
-                    .cornerRadius(20)
+                    .cornerRadius(10)
                     //                NavigationLink {
                     //                    ConfirmarOnibus()
                     //                } label: {

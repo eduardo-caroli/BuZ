@@ -13,7 +13,7 @@ struct BuZApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                Menu()
+                BuscaOnibus()
             }.environmentObject(busLocationDAO)
         }
     }

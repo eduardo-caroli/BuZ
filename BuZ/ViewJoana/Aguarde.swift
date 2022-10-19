@@ -18,7 +18,7 @@ struct Aguarde: View {
             VStack {
                 Spacer()
                 
-                Text("Aguare o \(busLocationDAO.line).\nEle chegará em \(busLocationDAO.closestBus!.ordem)")
+                Text("Aguarde o \(busLocationDAO.line).\nEle chegará em \(busLocationDAO.closestBus!.ordem)")
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
                     .font(.title)
