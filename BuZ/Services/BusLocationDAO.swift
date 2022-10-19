@@ -1,16 +1,15 @@
 //
-//  BusLocationViewModel.swift
+//  BusLocationDAO.swift
 //  BuZ
 //
-//  Created by Eduardo do Vale Caroli on 06/10/22.
+//  Created by Eduardo do Vale Caroli on 18/10/22.
 //
 
 import SwiftUI
 import Combine
 import CoreLocation
 
-
-class BusLocationViewModel: ObservableObject{
+class BusLocationDAO: ObservableObject{
     
     @ObservedObject var userLocationViewModel = UserLocationViewModel()
     @Published var line: String = ""
@@ -49,15 +48,4 @@ class BusLocationViewModel: ObservableObject{
                 })
         }
     }
-    
-//    func getBuses(){
-//
-//        Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { _ in
-//            self.callAPI()
-//        }
-//
-//
-//    }
 }
-
-

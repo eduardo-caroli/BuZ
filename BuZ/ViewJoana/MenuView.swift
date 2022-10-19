@@ -18,17 +18,7 @@ struct Menu: View {
                          .font(.largeTitle)
                          .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255))
                      
-//                     NavigationLink {
-//                         PraOndeVcVai()
-//                     } label: {
-//                         Text("Buscar Destino" as String)
-//                             .font(.title)
-//                             .frame(width: 280, height: 70)
-//                             .accessibilityAddTraits(.isButton)
-//                     }.buttonStyle(.borderedProminent)
-//                         .foregroundColor(.white)
-//                         .tint(Color.gray)
-//
+
                    NavigationLink {
                        BuscaOnibus()
                     } label: {
@@ -38,31 +28,12 @@ struct Menu: View {
                     }.buttonStyle(.borderedProminent)
                         .foregroundColor(.white)
                         .tint(Color.gray)
-                    
-//                    Button {
-//                        print("ola leila")
-//                    } label: {
-//                        Text("Favoritos")
-//                            .font(.title)
-//                            .frame(width: 280, height: 70)
-//                    }.buttonStyle(.borderedProminent)
-//                        .foregroundColor(.white)
-//                        .tint(Color.gray)
-//
-//                    Button {
-//                        print("ola leila")
-//                    } label: {
-//                        Text("Configurações")
-//                            .font(.title)
-//                            .frame(width: 280, height: 70)
-//                    }.buttonStyle(.borderedProminent)
-//                        .foregroundColor(.white)
-//                        .tint(Color.gray)
                 }.padding()
             
              
             
         }.ignoresSafeArea()
+            .navigationBarBackButtonHidden(true)
         
     }
 }

@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct BuscaOnibus: View {
-    @StateObject var busLocationViewModel = BusLocationViewModel()
+    @EnvironmentObject var busLocationDAO: BusLocationDAO
     @State var buscar:String = ""
     @State var didPressEnter: Bool = false
     
     var body: some View {
+
         GeometryReader { geometry in
             ZStack {
                 Color.black .ignoresSafeArea()
@@ -54,7 +55,7 @@ struct BuscaOnibus: View {
                     TextField ("Buscar...",text: $buscar) .onSubmit {
                         // updates `didPressEnter` to present next view
                         
-                        busLocationViewModel.line = buscar
+                        busLocationDAO.line = buscar
                         didPressEnter = true
                         
                         
@@ -87,6 +88,7 @@ struct BuscaOnibus: View {
                     Spacer()
                 }
                 .padding(.top, geometry.size.height / 27)
+
             }
             
         }
@@ -97,3 +99,5 @@ struct Tela_6_Previews: PreviewProvider {
         BuscaOnibus()
     }
 }
+
+ 

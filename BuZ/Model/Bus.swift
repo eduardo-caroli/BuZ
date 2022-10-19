@@ -15,7 +15,6 @@ struct Bus: Codable{
   var longitude: String
   var velocidade: String
   var dataHora: String
-  
   var location: CLLocation?{
       guard let latitude  = Double(self.latitude),
             let longitude = Double(self.longitude)  else {return nil}

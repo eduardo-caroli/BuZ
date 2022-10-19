@@ -9,27 +9,17 @@ import SwiftUI
 
 
 struct ConfirmarOnibus: View {
+    
+    @EnvironmentObject var busLocationDAO: BusLocationDAO
+    
     var body: some View {
         ZStack {
             Color.black
                 .ignoresSafeArea()
             VStack {
-                
-                //                Button {
-                //                    print("ola gabriel")
-                //                } label: {
-                //                    Text("Voltar")
-                //                        .font(.subheadline)
-                //                        .frame(width: 65, height: 40)
-                //                }.buttonStyle(.borderedProminent)
-                //                    .foregroundColor(.white)
-                //                    .tint(Color.gray)
-                //                    .frame(maxWidth: .infinity, alignment: .leading)
-                //                    .padding(.top, 10)
-                //                    .padding(.leading, 10)
                 Spacer()
-                
-                Text("O **107** \nChegará no ponto: \n UFRJ - Praia Vermelha \n Em: **5min**")
+
+                Text("O \(busLocationDAO.line) chegará em \(busLocationDAO.closestBus!.ordem)")
                     .font(.title)
                     .foregroundColor(.white)
                     .padding(. top, 150)
