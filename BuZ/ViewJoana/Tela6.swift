@@ -10,7 +10,7 @@ import AudioToolbox
 
 struct Tela6: View {
     var busNumber:Int = 107
-    var mainText:String {"Fique atento!\n O próximo ônibus\n é o **\(busNumber)**"}
+    var mainText:String {"Fique atento!\n O próximo ônibus\n é o \(busNumber)"}
     
     
     var body: some View {

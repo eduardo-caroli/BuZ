@@ -179,7 +179,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				"pt-BR",
 			);
 			mainGroup = AF6C54ED28EE2C7D005EEE2B;
 			productRefGroup = AF6C54F728EE2C7D005EEE2B /* Products */;

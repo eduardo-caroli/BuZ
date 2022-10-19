@@ -10,11 +10,14 @@ import SwiftUI
 @main
 struct BuZApp: App {
     @StateObject var busLocationDAO = BusLocationDAO()
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 BuscaOnibus()
-            }.environmentObject(busLocationDAO)
+            }
+            .environmentObject(busLocationDAO)
+            .environment(\.locale, Locale(identifier: "pt-BR"))
         }
     }
 }

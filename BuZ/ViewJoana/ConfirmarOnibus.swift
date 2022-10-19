@@ -11,7 +11,9 @@ import SwiftUI
 struct ConfirmarOnibus: View {
     
     @EnvironmentObject var busLocationDAO: BusLocationDAO
-    
+    var busLine:String {busLocationDAO.line}
+    var busATA:String { "1000 min" }
+
     var body: some View {
         ZStack {
             Color.black
@@ -19,13 +21,14 @@ struct ConfirmarOnibus: View {
             VStack {
                 Spacer()
 
-                Text("O \(busLocationDAO.line) chegará em \(busLocationDAO.closestBus!.ordem)")
+                Text("O \(busLine) chegará em \(busATA)")
                     .font(.title)
                     .foregroundColor(.white)
                     .padding(. top, 150)
                     .multilineTextAlignment(.center)
-                
-                
+                    .accessibilitySortPriority(-Double.infinity)
+
+
                 NavigationLink{
                     Aguarde()
                 } label: {
@@ -35,8 +38,8 @@ struct ConfirmarOnibus: View {
                 }.buttonStyle(.borderedProminent)
                     .foregroundColor(.black)
                     .tint(Color(red: 181/255, green: 215/255, blue: 255/255))
-                 
-                
+
+
                 NavigationLink{
                     BuscaOnibus()
                 } label: {
@@ -47,13 +50,15 @@ struct ConfirmarOnibus: View {
                     .foregroundColor(.white)
                     .tint(Color(red: 28/255, green: 28/255, blue: 28/255))
                     .padding(.bottom, 170)
+                    .accessibilitySortPriority(3)
                 Spacer()
-            }
+            }.accessibilitySortPriority(2)
         }
     }
 }
 
 struct ConfirmarOnibus_Previews: PreviewProvider {
+    @EnvironmentObject var busLocationDAO: BusLocationDAO
     static var previews: some View {
         ConfirmarOnibus()
     }
