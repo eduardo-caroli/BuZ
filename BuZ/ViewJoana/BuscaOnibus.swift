@@ -19,7 +19,8 @@ struct BuscaOnibus: View {
                 VStack {
                     
                     Text("BuZ")
-                        .font (.system(size: 80,weight: .bold, design: .serif))
+                        .font(.custom("Courier", size: 90))
+                     //   .font (.system(size: 80,weight: .bold, design: .serif))
                         .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255))
                         .padding (.bottom, geometry.size.height / 6)
                  
@@ -59,8 +60,8 @@ struct BuscaOnibus: View {
                         
                     }
                     .font(.subheadline)
-                    .foregroundColor(.black)
-                    .tint(Color.black)
+                    .foregroundColor(.white)
+                    .tint(Color.white)
                     .frame(width: 300, height: 50, alignment: .leading)
                     .padding(.leading, 10)
                     .padding(.leading, 10)
@@ -82,7 +83,7 @@ struct BuscaOnibus: View {
                     //                    .tint(Color.gray)
                     //                    .frame(maxWidth: .infinity, alignment: .leading)
                     //                    .padding(.leading, 10)
-                    .padding(.bottom, geometry.size.height / 10)
+                  //  .padding(.bottom, geometry.size.height / 10)
                     Spacer()
                 }
                 .padding(.top, geometry.size.height / 27)

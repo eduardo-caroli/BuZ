@@ -29,11 +29,12 @@ struct ConfirmarOnibus: View {
                 //                    .padding(.leading, 10)
                 Spacer()
                 
-                Text("O **107** \nChegará no ponto: \n UFRJ - Praia Vermelha em: **5min**")
+                Text("O **107** \nChegará no ponto: \n UFRJ - Praia Vermelha \n Em: **5min**")
                     .font(.title)
                     .foregroundColor(.white)
-                    .padding(40)
+                    .padding(. top, 150)
                     .multilineTextAlignment(.center)
+                
                 
                 NavigationLink{
                     Aguarde()
