@@ -18,7 +18,10 @@ struct Aguarde: View {
             VStack {
                 Spacer()
                 
-                Text("Aguare o \(busLocationDAO.line).\nEle chegará em \(busLocationDAO.closestBus!.ordem)")
+                Text("Aguare o \(busLocationDAO.line).\nEle chegará em \(busLocationDAO.closestBus!.ETA ?? 0)")
+                /*
+                Podemos usar o force unwrap em closestBus porque, se o usuário chegou nessa tela, já selecionou uma linha de ônibus válida.
+                 */
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
                     .font(.title)

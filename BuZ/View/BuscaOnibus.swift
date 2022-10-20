@@ -56,11 +56,15 @@ struct BuscaOnibus: View {
                     .padding(.bottom,350)
                     Spacer()
                 }
-                
-                TextField ("Buscar...",text: $buscar) .onSubmit {
-                    // updates `didPressEnter` to present next view
-                    busLocationDAO.line = buscar
-                    didPressEnter = true
+                NavigationLink{
+                    ConfirmarOnibus()
+                    
+                } label: {
+                    TextField ("Buscar...",text: $buscar) .onSubmit {
+                        // updates `didPressEnter` to present next view
+                        busLocationDAO.line = buscar
+                        didPressEnter = true
+                    }
                 }
                 .font(.subheadline)
                 .foregroundColor(.black)
@@ -91,7 +95,7 @@ struct BuscaOnibus: View {
             
         }
     }
-}
+
 struct Tela_6_Previews: PreviewProvider {
     static var previews: some View {
         BuscaOnibus()

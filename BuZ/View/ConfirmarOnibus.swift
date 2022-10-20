@@ -19,7 +19,7 @@ struct ConfirmarOnibus: View {
             VStack {
                 Spacer()
                 
-                Text("O \(busLocationDAO.line) chegará em \(busLocationDAO.closestBus!.ordem)")
+                Text("O \(busLocationDAO.line) chegará em \(busLocationDAO.closestBus!.ETA ?? 0)")
                     .font(.title)
                     .foregroundColor(.white)
                     .padding(40)
