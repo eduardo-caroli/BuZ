@@ -9,6 +9,7 @@ import SwiftUI
 import AudioToolbox
 
 struct Tela6: View {
+    @Environment(\.dismiss) private var dismiss
     var busNumber:Int = 107
     var mainText:String {"Fique atento!\n O próximo ônibus\n é o \(busNumber)"}
     
@@ -31,9 +32,26 @@ struct Tela6: View {
             Text (mainText)
                 .multilineTextAlignment(.center)
                 .foregroundColor(.black)
-                .font(.largeTitle)
+                .font(.custom("Sylexiad", size: 30))
                 .lineSpacing(10)
                 .padding(.bottom,50)
+            
+                .navigationBarBackButtonHidden(true)
+                .navigationBarItems(leading:
+                    Button {
+                        dismiss()
+                    } label: {
+                        HStack {
+                            Image(systemName: "chevron.backward")
+                                .tint(Color(red: 181/255, green: 215/255, blue: 255/255))
+                            Text("Voltar")
+                            .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255))
+                            .font(.custom("Helvetica", size: 20))
+                        }.accessibilitySortPriority(-2)
+                    }
+                )
+                .accessibilitySortPriority(2)
+                
         }
         .onTapGesture { print(mainText) }
         .onAppear{

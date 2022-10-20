@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct Aguarde: View {
-    
+    @Environment(\.dismiss) private var dismiss
+
     @EnvironmentObject var busLocationDAO: BusLocationDAO
     @State var isWaiting: Bool = true
     
@@ -21,12 +22,28 @@ struct Aguarde: View {
                 Text("Aguarde o \(busLocationDAO.line).\nEle chegará em \(busLocationDAO.closestBus!.ordem)")
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
-                    .font(.title)
+                    .font(.custom("Sylexiad", size: 30))
                     .lineSpacing(10)
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 110)
                 Spacer()
             }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading:
+                Button {
+                    dismiss()
+                } label: {
+                    HStack {
+                        Image(systemName: "chevron.backward")
+                            .tint(Color(red: 181/255, green: 215/255, blue: 255/255))
+                        Text("Voltar")
+                        .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255))
+                        .font(.custom("Helvetica", size: 20))
+                    }.accessibilitySortPriority(-2)
+                }
+            )
+            .accessibilitySortPriority(2)
+            
         }
     }
     
@@ -49,6 +66,7 @@ struct Aguarde: View {
             self.isWaiting = false
         }
     }
+       
 }
     
     struct Aguarde_Previews: PreviewProvider {
