@@ -13,6 +13,7 @@
 		AF6C54FA28EE2C7D005EEE2B /* BuZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C54F928EE2C7D005EEE2B /* BuZApp.swift */; };
 		AF6C54FE28EE2C80005EEE2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */; };
 		AF6C550128EE2C80005EEE2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */; };
+		AFE0F45A29006B4900533036 /* ETA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0F45929006B4900533036 /* ETA.swift */; };
 		E5DA0E4928F6142500D99780 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4828F6142500D99780 /* MenuView.swift */; };
 		E5DA0E5528F615AA00D99780 /* Pra onde vc vai.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5428F615AA00D99780 /* Pra onde vc vai.swift */; };
 		E5DA0E5628F615AA00D99780 /* ConfirmarOnibus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4F28F615AA00D99780 /* ConfirmarOnibus.swift */; };
@@ -34,6 +35,7 @@
 		AF6C54F928EE2C7D005EEE2B /* BuZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuZApp.swift; sourceTree = "<group>"; };
 		AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AFE0F45929006B4900533036 /* ETA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETA.swift; sourceTree = "<group>"; };
 		E5DA0E4828F6142500D99780 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		E5DA0E4B28F615A900D99780 /* Tela6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela6.swift; sourceTree = "<group>"; };
 		E5DA0E4C28F615AA00D99780 /* Tela8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela8.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				AF0A925C28FF208000EC62D9 /* BusLocationDAO.swift */,
+				AFE0F45929006B4900533036 /* ETA.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				E5DA0E5E28F615AA00D99780 /* BuscaOnibus.swift in Sources */,
 				E5DA0E5728F615AA00D99780 /* Aguarde.swift in Sources */,
 				AF6C54FA28EE2C7D005EEE2B /* BuZApp.swift in Sources */,
+				AFE0F45A29006B4900533036 /* ETA.swift in Sources */,
 				E5DA0E5D28F615AA00D99780 /* Proximo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
