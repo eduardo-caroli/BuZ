@@ -15,7 +15,8 @@ class Bus: Codable{
     var longitude: String
     var velocidade: String
     var dataHora: String
-    var ETA: Double?
+    var eta: Double?
+    
     var location: CLLocation?{
         guard let latitude  = Double(self.latitude),
               let longitude = Double(self.longitude)  else {return nil}
@@ -25,4 +26,20 @@ class Bus: Codable{
         return CLLocation(latitude: clLatitude, longitude: clLongitude)
     }
     
+    init() {
+        self.ordem =  ""
+        self.linha =  ""
+        self.latitude =  ""
+        self.longitude =  ""
+        self.velocidade =  ""
+        self.dataHora =  ""
+    }
+}
+
+extension Array where Element == Bus {
+    var asDictionary:[String:Bus] {
+        var dic:[String:Bus] = [:]
+        self.forEach {dic[$0.ordem] = $0}
+        return dic
+    }
 }

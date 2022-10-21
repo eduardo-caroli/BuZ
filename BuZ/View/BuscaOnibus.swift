@@ -16,7 +16,6 @@ struct BuscaOnibus: View {
         ZStack {
             Color.black .ignoresSafeArea()
             VStack {
-               
 //                Button {
 //                    print("ola gabriel")
 //                } label: {
@@ -56,15 +55,19 @@ struct BuscaOnibus: View {
                     .padding(.bottom,350)
                     Spacer()
                 }
-                NavigationLink{
-                    ConfirmarOnibus()
+                NavigationLink(
+                    destination: ConfirmarOnibus(),
                     
-                } label: {
-                    TextField ("Buscar...",text: $buscar) .onSubmit {
-                        // updates `didPressEnter` to present next view
-                        busLocationDAO.line = buscar
-                        didPressEnter = true
+                    isActive: $didPressEnter,
+                    
+                    label: {
+                        EmptyView()
                     }
+                )
+                TextField ("Buscar...",text: $buscar) .onSubmit {
+                    // updates `didPressEnter` to present next view
+                    busLocationDAO.line = buscar
+                    didPressEnter = true
                 }
                 .font(.subheadline)
                 .foregroundColor(.black)

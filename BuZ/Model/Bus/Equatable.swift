@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+extension Bus: Equatable{
+    
+    static func == (lhs: Bus, rhs: Bus) -> Bool {
+        
+        return(
+            (lhs.ordem == rhs.ordem) &&
+            (lhs.dataHora == rhs.dataHora)
+        )
+        
+    }
+    
+}

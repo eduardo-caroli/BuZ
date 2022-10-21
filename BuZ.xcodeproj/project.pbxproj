@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AF0A925D28FF208000EC62D9 /* BusLocationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A925C28FF208000EC62D9 /* BusLocationDAO.swift */; };
+		AF180D9D2901E569005ECE61 /* BusesHaveChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF180D9C2901E569005ECE61 /* BusesHaveChanged.swift */; };
+		AF180D9F2901E6CE005ECE61 /* Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF180D9E2901E6CE005ECE61 /* Equatable.swift */; };
+		AF1E1F882903489300582D3A /* etaString.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E1F872903489300582D3A /* etaString.swift */; };
 		AF48D29628EFA3850004599F /* UserLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48D29528EFA3850004599F /* UserLocationViewModel.swift */; };
 		AF48D2A528EFBEEE0004599F /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48D2A428EFBEEE0004599F /* Bus.swift */; };
 		AF6C54FA28EE2C7D005EEE2B /* BuZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C54F928EE2C7D005EEE2B /* BuZApp.swift */; };
@@ -29,6 +32,9 @@
 
 /* Begin PBXFileReference section */
 		AF0A925C28FF208000EC62D9 /* BusLocationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusLocationDAO.swift; sourceTree = "<group>"; };
+		AF180D9C2901E569005ECE61 /* BusesHaveChanged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusesHaveChanged.swift; sourceTree = "<group>"; };
+		AF180D9E2901E6CE005ECE61 /* Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equatable.swift; sourceTree = "<group>"; };
+		AF1E1F872903489300582D3A /* etaString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etaString.swift; sourceTree = "<group>"; };
 		AF48D29528EFA3850004599F /* UserLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationViewModel.swift; sourceTree = "<group>"; };
 		AF48D2A428EFBEEE0004599F /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
 		AF6C54F628EE2C7D005EEE2B /* BuZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,10 +69,29 @@
 		AF0A925E28FF208600EC62D9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				AF0A925C28FF208000EC62D9 /* BusLocationDAO.swift */,
-				AFE0F45929006B4900533036 /* ETA.swift */,
+				AF180D9B2901E55B005ECE61 /* BusLocation */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		AF180D9B2901E55B005ECE61 /* BusLocation */ = {
+			isa = PBXGroup;
+			children = (
+				AF0A925C28FF208000EC62D9 /* BusLocationDAO.swift */,
+				AFE0F45929006B4900533036 /* ETA.swift */,
+				AF180D9C2901E569005ECE61 /* BusesHaveChanged.swift */,
+			);
+			path = BusLocation;
+			sourceTree = "<group>";
+		};
+		AF180DA02901E6D5005ECE61 /* Bus */ = {
+			isa = PBXGroup;
+			children = (
+				AF48D2A428EFBEEE0004599F /* Bus.swift */,
+				AF1E1F872903489300582D3A /* etaString.swift */,
+				AF180D9E2901E6CE005ECE61 /* Equatable.swift */,
+			);
+			path = Bus;
 			sourceTree = "<group>";
 		};
 		AF48D2A328EFBEE10004599F /* ViewModel */ = {
@@ -80,7 +105,7 @@
 		AF48D2A628EFBEF60004599F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AF48D2A428EFBEEE0004599F /* Bus.swift */,
+				AF180DA02901E6D5005ECE61 /* Bus */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,7 +248,10 @@
 				AF48D29628EFA3850004599F /* UserLocationViewModel.swift in Sources */,
 				E5DA0E5928F615AA00D99780 /* Tela6.swift in Sources */,
 				E5DA0E5E28F615AA00D99780 /* BuscaOnibus.swift in Sources */,
+				AF1E1F882903489300582D3A /* etaString.swift in Sources */,
+				AF180D9F2901E6CE005ECE61 /* Equatable.swift in Sources */,
 				E5DA0E5728F615AA00D99780 /* Aguarde.swift in Sources */,
+				AF180D9D2901E569005ECE61 /* BusesHaveChanged.swift in Sources */,
 				AF6C54FA28EE2C7D005EEE2B /* BuZApp.swift in Sources */,
 				AFE0F45A29006B4900533036 /* ETA.swift in Sources */,
 				E5DA0E5D28F615AA00D99780 /* Proximo.swift in Sources */,
