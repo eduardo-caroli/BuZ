@@ -9,30 +9,20 @@ import SwiftUI
 
 
 struct ConfirmarOnibus: View {
+    
+    @EnvironmentObject var busLocationDAO: BusLocationDAO
+    
     var body: some View {
         ZStack {
             Color.black
                 .ignoresSafeArea()
             VStack {
-                
-                //                Button {
-                //                    print("ola gabriel")
-                //                } label: {
-                //                    Text("Voltar")
-                //                        .font(.subheadline)
-                //                        .frame(width: 65, height: 40)
-                //                }.buttonStyle(.borderedProminent)
-                //                    .foregroundColor(.white)
-                //                    .tint(Color.gray)
-                //                    .frame(maxWidth: .infinity, alignment: .leading)
-                //                    .padding(.top, 10)
-                //                    .padding(.leading, 10)
                 Spacer()
                 
-                Text("O 107\n Chegará no ponto da UFRJ em:\n 5min")
+                Text("O \(busLocationDAO.line) chegará em \(busLocationDAO.closestBus.etaString ?? "sem ETA")")
                     .font(.title)
                     .foregroundColor(.white)
-                    .padding(.horizontal)
+                    .padding(40)
                     .multilineTextAlignment(.center)
                 
                 NavigationLink{
@@ -43,10 +33,11 @@ struct ConfirmarOnibus: View {
                         .frame(width: 280, height: 70)
                 }.buttonStyle(.borderedProminent)
                     .foregroundColor(.black)
-                    .tint(Color.cyan)
+                    .tint(Color(red: 181/255, green: 215/255, blue: 255/255))
+                 
                 
                 NavigationLink{
-                    Menu()
+                    BuscaOnibus()
                 } label: {
                     Text("Cancelar")
                         .font(.title)
@@ -54,6 +45,7 @@ struct ConfirmarOnibus: View {
                 }.buttonStyle(.borderedProminent)
                     .foregroundColor(.white)
                     .tint(Color.gray)
+                    .padding(.bottom, 170)
                 Spacer()
             }
         }
