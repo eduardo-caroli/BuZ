@@ -130,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				AF6C54F928EE2C7D005EEE2B /* BuZApp.swift */,
-				E5DA0E4A28F6158800D99780 /* View */,
+				E5DA0E4A28F6158800D99780 /* ViewJoana */,
 				AF48D2A328EFBEE10004599F /* ViewModel */,
 				AF48D2A628EFBEF60004599F /* Model */,
 				AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */,
@@ -148,7 +148,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E5DA0E4A28F6158800D99780 /* View */ = {
+		E5DA0E4A28F6158800D99780 /* ViewJoana */ = {
 			isa = PBXGroup;
 			children = (
 				E5DA0E4828F6142500D99780 /* MenuView.swift */,
@@ -163,7 +163,7 @@
 				E5DA0E4C28F615AA00D99780 /* Tela8.swift */,
 				E5DA0E4D28F615AA00D99780 /* Todas as opções.swift */,
 			);
-			path = View;
+			path = ViewJoana;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,7 +207,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				"pt-BR",
 			);
 			mainGroup = AF6C54ED28EE2C7D005EEE2B;
 			productRefGroup = AF6C54F728EE2C7D005EEE2B /* Products */;
