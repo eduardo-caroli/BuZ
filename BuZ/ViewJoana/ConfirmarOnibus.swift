@@ -9,22 +9,32 @@ import SwiftUI
 
 
 struct ConfirmarOnibus: View {
-    
+
     @EnvironmentObject var busLocationDAO: BusLocationDAO
-    
+    var busLine:String {busLocationDAO.line}
+    var busATA:String { "1000 min" }
+    @State var nomeDaImagem: String = "ConfirmarTrace"
+
     var body: some View {
         ZStack {
             Color.black
                 .ignoresSafeArea()
+
+            Image(nomeDaImagem)
+                .resizable()
+                .scaledToFill()
+
             VStack {
                 Spacer()
-                
+
                 Text("O \(busLocationDAO.line) chegará em \(busLocationDAO.closestBus.etaString ?? "sem ETA")")
                     .font(.title)
                     .foregroundColor(.white)
-                    .padding(40)
+                    .padding(. top, 180)
+                    .padding(.leading, 15)
+                    .padding(.trailing, 15)
                     .multilineTextAlignment(.center)
-                
+
                 NavigationLink{
                     Aguarde()
                 } label: {
@@ -34,8 +44,8 @@ struct ConfirmarOnibus: View {
                 }.buttonStyle(.borderedProminent)
                     .foregroundColor(.black)
                     .tint(Color(red: 181/255, green: 215/255, blue: 255/255))
-                 
-                
+
+
                 NavigationLink{
                     BuscaOnibus()
                 } label: {

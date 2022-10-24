@@ -11,10 +11,16 @@ struct Aguarde: View {
     
     @EnvironmentObject var busLocationDAO: BusLocationDAO
     @State var isWaiting: Bool = true
+    @State var nomeDaImagem: String = "AguardeTrace"
     
     var waitingView: some View {
         ZStack {
             Color.black .ignoresSafeArea()
+            
+            Image(nomeDaImagem)
+                .resizable()
+                .scaledToFill()
+            
             VStack {
                 Spacer()
                 
