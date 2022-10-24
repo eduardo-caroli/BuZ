@@ -15,7 +15,7 @@ struct BuscaOnibus: View {
     
     var body: some View {
         
-       // GeometryReader { geometry in
+        GeometryReader { geometry in
             ZStack {
                 Color.black.ignoresSafeArea()
                 
@@ -39,33 +39,41 @@ struct BuscaOnibus: View {
                         
                     }
                     
-                    TextField ("Buscar...",text: $buscar ) .onSubmit {
+                    TextField ("Buscar...", text: $buscar )
+                    .font(.title2)
+                    .textFieldStyle(.plain)
+                    .tint(.white)
+                    .foregroundColor(.white)
+                    .frame(height: 50)
+                    .padding(.horizontal, 10)
+                    .background((Color(red: 28/255, green: 28/255, blue: 28/255)), in: RoundedRectangle(cornerRadius: 10))
+                    .padding(.horizontal, 40)
+                    .onSubmit {
                         // updates `didPressEnter` to present next view
-                        
                         busLocationDAO.line = buscar
                         didPressEnter = true
-                        
                     }
-                    .font(.title2)
-                    .foregroundColor(.white)
-                    .padding(.leading, 10)
-                    .textFieldStyle(.plain)
-                    .background(Color.gray)
-                    .cornerRadius(20)
+                    .padding(.bottom, 300)
+                    
                 }
 //                .frame(height: UIScreen.main.bounds.height)
-                .padding(.bottom, UIScreen.main.bounds.height * 0.35)
+//                .padding(.bottom, UIScreen.main.bounds.height * 0.35)
                 .background {
                     Image(nomeDaImagem)
                         .resizable()
-                        .scaledToFit()
+                        .scaledToFill()
                         .clipped()
+                        .accessibilityHidden(true)
                 }
                 
                 
+                
             }
+            .frame(width: geometry.size.width, height: geometry.size.height)
             
-  //      }
+            
+        }
+        .ignoresSafeArea(.keyboard, edges: .all)
     }
 }
 

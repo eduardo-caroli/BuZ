@@ -9,6 +9,8 @@ import SwiftUI
 
 
 struct ConfirmarOnibus: View {
+    
+    
 
     @EnvironmentObject var busLocationDAO: BusLocationDAO
     var busLine:String {busLocationDAO.line}
@@ -23,26 +25,29 @@ struct ConfirmarOnibus: View {
             Image(nomeDaImagem)
                 .resizable()
                 .scaledToFill()
+                .accessibilityHidden(true)
 
             VStack {
                 Spacer()
 
                 Text("O \(busLocationDAO.line) chegará em \(busLocationDAO.closestBus.etaString ?? "sem ETA")")
-                    .font(.title)
+                    .font(.custom("Sylexiad", size: 30))
                     .foregroundColor(.white)
-                    .padding(. top, 180)
-                    .padding(.leading, 15)
-                    .padding(.trailing, 15)
+                    .padding(.top, 180)
+                    .padding(.horizontal, 15)
                     .multilineTextAlignment(.center)
+                    .padding(.bottom, 40)
+                    .background(.black.opacity(0.01))
+                    .accessibilityAddTraits(.isStaticText)
 
                 NavigationLink{
                     Aguarde()
                 } label: {
                     Text("Confirmar")
-                        .font(.title)
+                        .font(.custom("Sylexiad", size: 30))
                         .frame(width: 280, height: 70)
                 }.buttonStyle(.borderedProminent)
-                    .foregroundColor(.black)
+                    .foregroundColor (.black)
                     .tint(Color(red: 181/255, green: 215/255, blue: 255/255))
 
 
@@ -50,14 +55,36 @@ struct ConfirmarOnibus: View {
                     BuscaOnibus()
                 } label: {
                     Text("Cancelar")
-                        .font(.title)
+                        .font(.custom("Sylexiad", size: 30))
                         .frame(width: 280, height: 70)
                 }.buttonStyle(.borderedProminent)
                     .foregroundColor(.white)
-                    .tint(Color.gray)
+                    .tint(Color(red: 28/255, green: 28/255, blue: 28/255))
+
                     .padding(.bottom, 170)
                 Spacer()
             }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: BackButton())
+            .accessibilitySortPriority(2)
+        }
+    }
+}
+
+struct BackButton: View {
+    @Environment(\.dismiss) private var dismiss
+    
+    var body: some View {
+        Button {
+            dismiss()
+        } label: {
+            HStack {
+                Image(systemName: "chevron.backward")
+                    .tint(Color(red: 181/255, green: 215/255, blue: 255/255))
+                Text("Voltar")
+                    .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255))
+                    .font(.custom("Helvetica", size: 20))
+            }.accessibilitySortPriority(-2)
         }
     }
 }

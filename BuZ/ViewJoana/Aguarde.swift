@@ -30,7 +30,7 @@ struct Aguarde: View {
                  */
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
-                    .font(.title)
+                    .font(.custom("Sylexiad", size: 30))
                     .lineSpacing(10)
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 110)
@@ -40,14 +40,18 @@ struct Aguarde: View {
     }
     
     var body: some View {
-        if isWaiting {
-            waitingView
-                .onAppear {
-                wait(seconds: 5)
+        Group {
+            if isWaiting {
+                waitingView
+                    .onAppear {
+                        wait(seconds: 5)
+                    }
+            } else {
+                Tela6()
             }
-        } else {
-            Tela6()
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: BackButton())
         
         
     }

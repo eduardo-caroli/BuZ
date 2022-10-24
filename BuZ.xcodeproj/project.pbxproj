@@ -17,6 +17,9 @@
 		AF6C54FE28EE2C80005EEE2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */; };
 		AF6C550128EE2C80005EEE2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */; };
 		AFE0F45A29006B4900533036 /* ETA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0F45929006B4900533036 /* ETA.swift */; };
+		E59A494229072471001939BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59A493F29072471001939BE /* ContentView.swift */; };
+		E59A494329072471001939BE /* HapticsDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59A494029072471001939BE /* HapticsDSL.swift */; };
+		E59A494429072471001939BE /* HapticsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59A494129072471001939BE /* HapticsHandler.swift */; };
 		E5DA0E4928F6142500D99780 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4828F6142500D99780 /* MenuView.swift */; };
 		E5DA0E5528F615AA00D99780 /* Pra onde vc vai.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5428F615AA00D99780 /* Pra onde vc vai.swift */; };
 		E5DA0E5628F615AA00D99780 /* ConfirmarOnibus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4F28F615AA00D99780 /* ConfirmarOnibus.swift */; };
@@ -42,6 +45,9 @@
 		AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AFE0F45929006B4900533036 /* ETA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETA.swift; sourceTree = "<group>"; };
+		E59A493F29072471001939BE /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E59A494029072471001939BE /* HapticsDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticsDSL.swift; sourceTree = "<group>"; };
+		E59A494129072471001939BE /* HapticsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticsHandler.swift; sourceTree = "<group>"; };
 		E5DA0E4828F6142500D99780 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		E5DA0E4B28F615A900D99780 /* Tela6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela6.swift; sourceTree = "<group>"; };
 		E5DA0E4C28F615AA00D99780 /* Tela8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela8.swift; sourceTree = "<group>"; };
@@ -97,6 +103,9 @@
 		AF48D2A328EFBEE10004599F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E59A493F29072471001939BE /* ContentView.swift */,
+				E59A494129072471001939BE /* HapticsHandler.swift */,
+				E59A494029072471001939BE /* HapticsDSL.swift */,
 				AF48D29528EFA3850004599F /* UserLocationViewModel.swift */,
 			);
 			path = ViewModel;
@@ -237,11 +246,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5DA0E5528F615AA00D99780 /* Pra onde vc vai.swift in Sources */,
+				E59A494429072471001939BE /* HapticsHandler.swift in Sources */,
 				E5DA0E5628F615AA00D99780 /* ConfirmarOnibus.swift in Sources */,
 				E5DA0E5C28F615AA00D99780 /* Todas as opções.swift in Sources */,
 				E5DA0E4928F6142500D99780 /* MenuView.swift in Sources */,
+				E59A494329072471001939BE /* HapticsDSL.swift in Sources */,
 				AF48D2A528EFBEEE0004599F /* Bus.swift in Sources */,
 				E5DA0E5B28F615AA00D99780 /* Tela7.swift in Sources */,
+				E59A494229072471001939BE /* ContentView.swift in Sources */,
 				AF0A925D28FF208000EC62D9 /* BusLocationDAO.swift in Sources */,
 				E5DA0E5A28F615AA00D99780 /* Tela8.swift in Sources */,
 				E5DA0E5828F615AA00D99780 /* MelhorTrajeto.swift in Sources */,
