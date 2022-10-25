@@ -13,7 +13,8 @@ public struct Stop: Codable {
     public let stopLat: Double
     public let stopLon: Double
     public let locationType: Int
-    public let parentStation: ParentStation
+//    public let parentStation: ParentStation
+    public let busLines:[String]?
     
     enum CodingKeys: String, CodingKey {
         case stopID = "stop_id"
@@ -21,16 +22,18 @@ public struct Stop: Codable {
         case stopLat = "stop_lat"
         case stopLon = "stop_lon"
         case locationType = "location_type"
-        case parentStation = "parent_station"
+//        case parentStation = "parent_station"
+        case busLines = "stops"
     }
 
-    public init(stopID: String, stopName: String, stopLat: Double, stopLon: Double, locationType: Int, parentStation: ParentStation) {
+
+    init(stopID: String, stopName: String, stopLat: Double, stopLon: Double, locationType: Int, busLines: [String]?) {
         self.stopID = stopID
         self.stopName = stopName
         self.stopLat = stopLat
         self.stopLon = stopLon
         self.locationType = locationType
-        self.parentStation = parentStation
+        self.busLines = busLines
     }
     
     func readLocalJSONFile(for name: String) -> Data? {
@@ -90,7 +93,7 @@ public typealias Stops = [Stop]
 
 
 /*
- Ônibus 107 e sp513 passam por esses pontos
+ Ônibus 107 e SP513 passam por esses pontos
  
  2022O00001C0,Instituto Benjamin Constant,-22.953193008712944, -43.171885072614636,0,  <- Atualizar essa lat/long no json
  2022O00002C0,UNIRIO,-22.95422,-43.16858,0,
@@ -112,3 +115,5 @@ public typealias Stops = [Stop]
  2022O00025C0,Mureta da Urca,-22.95068,-43.16777,0,
  2022O00026C0,Urca :: Linha 107,-22.94334,-43.16081,0,
  */
+//    "stops": ["107", "SP513"]
+//FEITO

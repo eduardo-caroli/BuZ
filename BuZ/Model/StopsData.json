@@ -5106,10 +5106,11 @@
   {
     "stop_id": "2022O00001C0",
     "stop_name": "Instituto Benjamin Constant",
-    "stop_lat": -22.95299,
-    "stop_lon": -43.17244,
+    "stop_lat": -22.953193008712944,
+    "stop_lon": -43.171885072614636,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00002C0",
@@ -5118,6 +5119,7 @@
     "stop_lon": -43.16858,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00003C0",
@@ -5126,6 +5128,7 @@
     "stop_lon": -43.16746,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00005C0",
@@ -5134,6 +5137,7 @@
     "stop_lon": -43.1662,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00006C0",
@@ -5142,6 +5146,7 @@
     "stop_lon": -43.16443,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00007C0",
@@ -5150,6 +5155,7 @@
     "stop_lon": -43.16211,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00008C0",
@@ -5158,6 +5164,7 @@
     "stop_lon": -43.161,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00010C0",
@@ -5166,6 +5173,7 @@
     "stop_lon": -43.16164,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00011C0",
@@ -5174,6 +5182,7 @@
     "stop_lon": -43.16332,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00013C0",
@@ -5182,6 +5191,7 @@
     "stop_lon": -43.16418,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00014C0",
@@ -5190,6 +5200,7 @@
     "stop_lon": -43.16593,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00016C0",
@@ -5198,6 +5209,7 @@
     "stop_lon": -43.16856,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00018C0",
@@ -5206,6 +5218,7 @@
     "stop_lon": -43.16889,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00019C0",
@@ -5214,6 +5227,7 @@
     "stop_lon": -43.1717,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00020C0",
@@ -5222,6 +5236,7 @@
     "stop_lon": -43.17322,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00021C0",
@@ -5230,6 +5245,7 @@
     "stop_lon": -43.16151,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00023C0",
@@ -5238,6 +5254,7 @@
     "stop_lon": -43.16811,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00025C0",
@@ -5246,6 +5263,7 @@
     "stop_lon": -43.16777,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2022O00026C0",
@@ -5254,6 +5272,7 @@
     "stop_lon": -43.16081,
     "location_type": 0,
     "parent_station": ""
+    "stops": ["107", "SP513"]
   },
   {
     "stop_id": "2023O00008C0",
