@@ -9,7 +9,7 @@ import Foundation
 import CoreLocation
 import SwiftUI
 import MapKit
-extension BusLocationDAO {
+extension BusLocator {
     enum ReqError:Error {
         case etaunnexpectedNil
     }

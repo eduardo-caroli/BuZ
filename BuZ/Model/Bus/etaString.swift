@@ -10,7 +10,8 @@ import Foundation
 extension Bus {
     
     var etaString: String? {
-        if var eta = self.eta {
+        if var eta = self.eta{
+            eta -= (Date().timeIntervalSince(self.lastReadingTime!))
             if eta <= 3540 {return "\( Int( (eta/60).rounded(.up) ) ) min"}
             else if eta < 3660 {return "1h"}
             else {

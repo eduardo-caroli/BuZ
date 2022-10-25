@@ -36,6 +36,8 @@ class Bus: Codable{
         self.eta = eta
     }
     
+    var lastReadingTime: Date?
+    
     init() {
         self.ordem =  ""
         self.linha =  ""
