@@ -21,7 +21,7 @@ struct MelhorTrajeto: View {
 //                            .frame(width: 65, height: 40)
 //                    }.buttonStyle(.borderedProminent)
 //                        .foregroundColor(.white)
-//                        .tint(Color.gray)
+//                         .tint(Color.gray)
 //                        .frame(maxWidth: .infinity, alignment: .leading)
 //                        .padding(.top, 10)
 //                        .padding(.leading, 10)

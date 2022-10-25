@@ -43,7 +43,7 @@ class BusLocationViewModel: ObservableObject{
                         guard let location = self.userLocationViewModel.userLocation else{return false}
                         let d1 = $0.distance(from: location)
                         let d2 = $1.distance(from: location)
-                        return(d1 > d2)
+                        return(d1 < d2)
                     }[0]
                     self.callAPI(at: DispatchTime.now() + 10)
                 })
@@ -59,5 +59,3 @@ class BusLocationViewModel: ObservableObject{
 //
 //    }
 }
-
-
