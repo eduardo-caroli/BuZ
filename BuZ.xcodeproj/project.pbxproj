@@ -17,6 +17,9 @@
 		AF6C54FE28EE2C80005EEE2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */; };
 		AF6C550128EE2C80005EEE2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */; };
 		AFE0F45A29006B4900533036 /* ETA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0F45929006B4900533036 /* ETA.swift */; };
+		C00637E029087129008ADEE8 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00637DF29087129008ADEE8 /* Stop.swift */; };
+		C00637E22908716A008ADEE8 /* StopsData.json in Resources */ = {isa = PBXBuildFile; fileRef = C00637E12908716A008ADEE8 /* StopsData.json */; };
+		C00637E429087182008ADEE8 /* ViewModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00637E329087182008ADEE8 /* ViewModelExtensions.swift */; };
 		E59A494229072471001939BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59A493F29072471001939BE /* ContentView.swift */; };
 		E59A494329072471001939BE /* HapticsDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59A494029072471001939BE /* HapticsDSL.swift */; };
 		E59A494429072471001939BE /* HapticsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59A494129072471001939BE /* HapticsHandler.swift */; };
@@ -45,6 +48,9 @@
 		AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AFE0F45929006B4900533036 /* ETA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETA.swift; sourceTree = "<group>"; };
+		C00637DF29087129008ADEE8 /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		C00637E12908716A008ADEE8 /* StopsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StopsData.json; sourceTree = "<group>"; };
+		C00637E329087182008ADEE8 /* ViewModelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelExtensions.swift; sourceTree = "<group>"; };
 		E59A493F29072471001939BE /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E59A494029072471001939BE /* HapticsDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticsDSL.swift; sourceTree = "<group>"; };
 		E59A494129072471001939BE /* HapticsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticsHandler.swift; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 				E59A494129072471001939BE /* HapticsHandler.swift */,
 				E59A494029072471001939BE /* HapticsDSL.swift */,
 				AF48D29528EFA3850004599F /* UserLocationViewModel.swift */,
+				C00637E329087182008ADEE8 /* ViewModelExtensions.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -114,6 +121,8 @@
 		AF48D2A628EFBEF60004599F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C00637DF29087129008ADEE8 /* Stop.swift */,
+				C00637E12908716A008ADEE8 /* StopsData.json */,
 				AF180DA02901E6D5005ECE61 /* Bus */,
 			);
 			path = Model;
@@ -233,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C00637E22908716A008ADEE8 /* StopsData.json in Resources */,
 				AF6C550128EE2C80005EEE2B /* Preview Assets.xcassets in Resources */,
 				AF6C54FE28EE2C80005EEE2B /* Assets.xcassets in Resources */,
 			);
@@ -245,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C00637E429087182008ADEE8 /* ViewModelExtensions.swift in Sources */,
 				E5DA0E5528F615AA00D99780 /* Pra onde vc vai.swift in Sources */,
 				E59A494429072471001939BE /* HapticsHandler.swift in Sources */,
 				E5DA0E5628F615AA00D99780 /* ConfirmarOnibus.swift in Sources */,
@@ -260,6 +271,7 @@
 				AF48D29628EFA3850004599F /* UserLocationViewModel.swift in Sources */,
 				E5DA0E5928F615AA00D99780 /* Tela6.swift in Sources */,
 				E5DA0E5E28F615AA00D99780 /* BuscaOnibus.swift in Sources */,
+				C00637E029087129008ADEE8 /* Stop.swift in Sources */,
 				AF1E1F882903489300582D3A /* etaString.swift in Sources */,
 				AF180D9F2901E6CE005ECE61 /* Equatable.swift in Sources */,
 				E5DA0E5728F615AA00D99780 /* Aguarde.swift in Sources */,
