@@ -60,8 +60,6 @@ class BusLocator: ObservableObject{
                         self.callAPI(at: DispatchTime.now() + 5, for: self.line)
                     }
                     
-                    
-                    
                     print("to funcionando pra linha", line)
                 })
         }
@@ -93,50 +91,25 @@ class BusLocator: ObservableObject{
         self.desiredBuses = newBuses
     }
     
-//    func updateETA(for i:Int) {
-//
-//        guard i < self.querableBuses.count,
-//              !isDead
-//        else { return }
-//
-//        let userLocation = self.userLocationViewModel.userLocation ?? CLLocation(latitude:  -22.977726, longitude: -43.232090)
-//        self.getETA(from: self.querableBuses[i].location!, to: userLocation) { result in
-//            switch result{
-//            case .success(let timeInterval):
-//                self.querableBuses[i].eta = timeInterval
-//                self.updateClosetBus(comparingWith: self.querableBuses[i])
-//
-//            case .failure(let error):
-//                debugPrint("unable to fetch ETA: ",error)
-//            }
-//
-//            self.updateETA(for: i + 1)
-//
-//        }
-//
-//    }
     
-        let semaphore = DispatchSemaphore(value: 1)
         func updateETA(for buses:[Bus]) {
     
             for bus in buses {
                 guard !isDead else {
-                    semaphore.resume()
                     return
                 }
-                semaphore.wait()
                 let userLocation = self.userLocationViewModel.userLocation ?? CLLocation(latitude:  -22.977726, longitude: -43.232090)
-                self.getETA(from: bus.location!, to: userLocation) { result in
+                getETA(from: bus.location!, to: userLocation) { result in
                     
                     switch result{
                     case .success(let timeInterval):
                         bus.eta = timeInterval
+                        bus.lastReadingTime = Date.now
                         self.updateClosetBus(comparingWith: bus)
     
                     case .failure(let error):
                         debugPrint("unable to fetch ETA: ",error)
                     }
-                    self.semaphore.signal()
                 }
             }
         }
@@ -146,7 +119,6 @@ class BusLocator: ObservableObject{
         guard (closestBus.eta ?? Double.infinity ) > eta else {return}
         self.objectWillChange.send()
         closestBus = otherBus
-        print("ETA", closestBus.eta ?? -1)
     }
     
     deinit{

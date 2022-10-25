@@ -26,6 +26,8 @@ class Bus: Codable{
         return CLLocation(latitude: clLatitude, longitude: clLongitude)
     }
     
+    var lastReadingTime: Date?
+    
     init() {
         self.ordem =  ""
         self.linha =  ""
