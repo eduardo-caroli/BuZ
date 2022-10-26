@@ -13,6 +13,8 @@ struct BuscaOnibus: View {
     @State var didPressEnter: Bool = false
     @State var nomeDaImagem: String = "BuscaTrace"
     
+    var validator = Validator()
+    
     var body: some View {
         
         GeometryReader { geometry in
@@ -50,8 +52,10 @@ struct BuscaOnibus: View {
                     .padding(.horizontal, 40)
                     .onSubmit {
                         // updates `didPressEnter` to present next view
-                        busLocationDAO.line = buscar
-                        didPressEnter = true
+                            if (validator.checkLineExistence(of: buscar)){
+                            busLocationDAO.line = buscar
+                            didPressEnter = true
+                        }
                     }
                     .padding(.bottom, 300)
                     
