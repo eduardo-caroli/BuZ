@@ -98,7 +98,8 @@ class BusLocator: ObservableObject{
                 guard !isDead else {
                     return
                 }
-                let userLocation = self.userLocationViewModel.userLocation ?? CLLocation(latitude:  -22.977726, longitude: -43.232090)
+                //localização default: endereço do IBC
+                let userLocation = self.userLocationViewModel.userLocation ?? CLLocation(latitude:  -22.952584, longitude: -43.173258)
                 getETA(from: bus.location!, to: userLocation) { result in
                     
                     switch result{
