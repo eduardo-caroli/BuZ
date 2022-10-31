@@ -13,7 +13,7 @@ struct BuscaOnibus: View {
     @State var didPressEnter: Bool = false
     @State var nomeDaImagem: String = "BuscaTrace"
     @State var busIsValid: Bool = true
-    
+    @State var textfieldPlaceholder: String = "Qual o seu ônibus?"
     var validator = Validator()
     @State var nomeDaImagem2: String = "Buz"
    
@@ -56,7 +56,7 @@ struct BuscaOnibus: View {
                     }
                     
 
-                    TextField ("Qual o seu ônibus?", text: $buscar )
+                    TextField (textfieldPlaceholder, text: $buscar )
                     .font(.title2)
                     .submitLabel(.search)
                     .textFieldStyle(.plain)
@@ -74,14 +74,11 @@ struct BuscaOnibus: View {
                             didPressEnter = true
                         } else {
                             busIsValid = false
+                            textfieldPlaceholder = "O \(buscar) não foi encontrado."
+                            buscar = ""
                         }
                     }
                     .padding(.bottom, 300)
-                    if(!busIsValid){
-                        Text("O ônibus \(buscar) não foi encontrado.")
-                        .tint(.white)
-                        .foregroundColor(.white)
-                    }
                 }
 //                .frame(height: UIScreen.main.bounds.height)
 //                .padding(.bottom, UIScreen.main.bounds.height * 0.35)
