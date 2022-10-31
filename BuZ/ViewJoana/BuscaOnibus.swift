@@ -15,8 +15,8 @@ struct BuscaOnibus: View {
     @State var busIsValid: Bool = true
     
     var validator = Validator()
-    @State var nomeDaImagem2: String = "IconeSemFundo"
-    
+    @State var nomeDaImagem2: String = "Buz"
+   
     var body: some View {
         
         GeometryReader { geometry in
@@ -25,23 +25,24 @@ struct BuscaOnibus: View {
                 
                 VStack {
                     
-                  
                     
-//                    Text("BuZ")
-//                        .font(.custom("Gill Sans SemiBold", size: 90))
-//                        .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255))
-//                        .padding(.bottom, UIScreen.main.bounds.height / 10)
+                    
+                    //                    Text("BuZ")
+                    //                        .font(.custom("Gill Sans SemiBold", size: 90))
+                    //                        .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255))
+                    //                        .padding(.bottom, UIScreen.main.bounds.height / 10)
                     Image(nomeDaImagem2)
                         .resizable()
                         .scaledToFit()
-                        .frame(height: 130)
-                      //  .aspectRatio(1, contentMode: .fit)
+                        .frame(height: 75)
+                    //  .aspectRatio(1, contentMode: .fit)
                         .clipped()
                         .accessibilityHidden(false)
                         .accessibilityLabel("Buz")
                         .padding(.bottom, 60)
                     
                     Text("Qual o seu ônibus?")
+                
                         .font(.custom("Sylexiad", size: 30))
                         .foregroundColor(.white)
                     //                    .frame(maxWidth: .infinity, alignment: .leading)
@@ -54,6 +55,7 @@ struct BuscaOnibus: View {
                         
                     }
                     
+
                     TextField ("Qual o seu ônibus?", text: $buscar )
                     .font(.title2)
                     .textFieldStyle(.plain)
@@ -79,7 +81,6 @@ struct BuscaOnibus: View {
                         .tint(.white)
                         .foregroundColor(.white)
                     }
-                    
                 }
 //                .frame(height: UIScreen.main.bounds.height)
 //                .padding(.bottom, UIScreen.main.bounds.height * 0.35)
