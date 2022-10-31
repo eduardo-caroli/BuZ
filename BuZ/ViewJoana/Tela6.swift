@@ -17,6 +17,7 @@ struct Tela6: View {
     @State var nomeDaImagem: String = "Tela6Trace"
     @StateObject var hapticsHandler = HapticsHandler()
 
+    @State var scale = 1.0
     var body: some View {
         ZStack {
             Color.black .ignoresSafeArea()
@@ -29,14 +30,40 @@ struct Tela6: View {
                 .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255, opacity: 80/100))
                 .padding(30)
                 .padding(.bottom,50)
+                .scaleEffect(scale)
+                .onAppear {
+                    let base = Animation.easeInOut(duration: 1.2)
+                    let repeated = base.repeatForever(autoreverses: true)
+                    withAnimation(repeated) {
+                        scale = 1.1
+                    }
+                }
             Circle()
                 .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255, opacity: 68/100))
                 .padding(45)
                 .padding(.bottom,50)
+                .scaleEffect(scale)
+                .onAppear {
+                    let base = Animation.easeInOut(duration: 1.2)
+                    let repeated = base.repeatForever(autoreverses: true)
+                    withAnimation(repeated) {
+                        scale = 1.1
+                    }
+                }
+            
             Circle()
                 .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255))
                 .padding(60)
                 .padding(.bottom,50)
+                .scaleEffect(scale)
+                .onAppear {
+                    let base = Animation.easeInOut(duration: 1.1)
+                    let repeated = base.repeatForever(autoreverses: true)
+                    withAnimation(repeated) {
+                        scale = 1.1
+                    }
+                }
+            
             Text ("Fique atento!\n O próximo ônibus\n é o **107**")
                 .multilineTextAlignment(.center)
                 .foregroundColor(.black)
@@ -45,6 +72,7 @@ struct Tela6: View {
                 .padding(.bottom,50)
         }.onAppear{
             hapticsHandler.tocar()
+            
         }
     }
 }
