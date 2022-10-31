@@ -4,8 +4,8 @@
 //
 //  Created by Joana Lopes on 06/10/22.
 //
-
 import SwiftUI
+import AVFoundation
 
 struct BuscaOnibus: View {
     @EnvironmentObject var busLocationDAO: BusLocationDAO
@@ -76,6 +76,7 @@ struct BuscaOnibus: View {
                             busIsValid = false
                             textfieldPlaceholder = "O \(buscar) não foi encontrado."
                             buscar = ""
+                            textfieldPlaceholder.speak()
                         }
                     }
                     .padding(.bottom, 300)

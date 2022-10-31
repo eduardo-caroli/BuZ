@@ -12,8 +12,7 @@ import CoreHaptics
 
 struct Tela6: View {
     @Environment(\.dismiss) private var dismiss
-    var busNumber:Int = 107
-    var mainText:String {"Fique atento!\n O próximo ônibus\n é o \(busNumber)"}
+    @EnvironmentObject var busLocationDAO: BusLocationDAO
     @State var nomeDaImagem: String = "Tela6Trace"
     @StateObject var hapticsHandler = HapticsHandler()
 
@@ -64,7 +63,7 @@ struct Tela6: View {
                     }
                 }
             
-            Text ("Fique atento!\n O próximo ônibus\n é o **107**")
+            Text ("Fique atento!\n O próximo ônibus\n é o \(busLocationDAO.line)")
                 .multilineTextAlignment(.center)
                 .foregroundColor(.black)
                 .font(.custom("Sylexiad", size: 30))
