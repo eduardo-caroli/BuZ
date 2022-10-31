@@ -25,6 +25,16 @@ class Bus: Codable{
         let clLongitude = CLLocationDegrees(longitude)
         return CLLocation(latitude: clLatitude, longitude: clLongitude)
     }
+
+    init(ordem: String, linha: String, latitude: String, longitude: String, velocidade: String, dataHora: String, eta: Double? = nil) {
+        self.ordem = ordem
+        self.linha = linha
+        self.latitude = latitude
+        self.longitude = longitude
+        self.velocidade = velocidade
+        self.dataHora = dataHora
+        self.eta = eta
+    }
     
     var lastReadingTime: Date?
     
