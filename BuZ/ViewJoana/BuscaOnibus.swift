@@ -15,6 +15,7 @@ struct BuscaOnibus: View {
     @State var busIsValid: Bool = true
     
     var validator = Validator()
+    @State var nomeDaImagem2: String = "IconeSemFundo"
     
     var body: some View {
         
@@ -24,17 +25,28 @@ struct BuscaOnibus: View {
                 
                 VStack {
                     
-                    Text("BuZ")
-                        .font(.custom("Gill Sans SemiBold", size: 90))
-                        .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255))
-                        .padding(.bottom, UIScreen.main.bounds.height / 10)
+                  
                     
+//                    Text("BuZ")
+//                        .font(.custom("Gill Sans SemiBold", size: 90))
+//                        .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255))
+//                        .padding(.bottom, UIScreen.main.bounds.height / 10)
+                    Image(nomeDaImagem2)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 130)
+                      //  .aspectRatio(1, contentMode: .fit)
+                        .clipped()
+                        .accessibilityHidden(false)
+                        .accessibilityLabel("Buz")
+                        .padding(.bottom, 60)
                     
                     Text("Qual o seu ônibus?")
                         .font(.custom("Sylexiad", size: 30))
                         .foregroundColor(.white)
                     //                    .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.bottom, 25)
+                        .accessibilityHidden(true)
                     
                     
                     NavigationLink(destination: ConfirmarOnibus(), isActive: $didPressEnter) {
@@ -42,7 +54,7 @@ struct BuscaOnibus: View {
                         
                     }
                     
-                    TextField ("Buscar...", text: $buscar )
+                    TextField ("Qual o seu ônibus?", text: $buscar )
                     .font(.title2)
                     .textFieldStyle(.plain)
                     .tint(.white)
@@ -71,12 +83,19 @@ struct BuscaOnibus: View {
                 }
 //                .frame(height: UIScreen.main.bounds.height)
 //                .padding(.bottom, UIScreen.main.bounds.height * 0.35)
+                
+                    
+                
                 .background {
                     Image(nomeDaImagem)
                         .resizable()
                         .scaledToFill()
                         .clipped()
                         .accessibilityHidden(true)
+                    
+                }
+                .onTapGesture {
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }
                 
                 
