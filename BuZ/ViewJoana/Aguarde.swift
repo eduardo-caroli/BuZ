@@ -13,6 +13,8 @@ struct Aguarde: View {
     @State var isWaiting: Bool = true
     @State var nomeDaImagem: String = "AguardeTrace"
     
+    let validator = Validator()
+    
     var waitingView: some View {
         ZStack {
             Color.black .ignoresSafeArea()

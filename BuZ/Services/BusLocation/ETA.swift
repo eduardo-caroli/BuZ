@@ -13,7 +13,8 @@ extension BusLocator {
     enum ReqError:Error {
         case etaunnexpectedNil
     }
-    func getETA(from loc1: CLLocation, to loc2: CLLocation = CLLocation(latitude: -22.90319, longitude: -43.18397), then completion: @escaping (Result<TimeInterval, Error>)->Void) -> Void {
+    //localização default: endereço do IBC
+    func getETA(from loc1: CLLocation, to loc2: CLLocation = CLLocation(latitude: -22.952584, longitude: -43.173258), then completion: @escaping (Result<TimeInterval, Error>)->Void) -> Void {
         var directions: MKDirections
         let request = MKDirections.Request()
         request.source = MKMapItem(placemark: MKPlacemark(coordinate: loc1.coordinate))

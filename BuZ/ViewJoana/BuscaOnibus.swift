@@ -12,6 +12,9 @@ struct BuscaOnibus: View {
     @State var buscar:String = ""
     @State var didPressEnter: Bool = false
     @State var nomeDaImagem: String = "BuscaTrace"
+    @State var busIsValid: Bool = true
+    
+    var validator = Validator()
     
     var body: some View {
         
@@ -50,10 +53,20 @@ struct BuscaOnibus: View {
                     .padding(.horizontal, 40)
                     .onSubmit {
                         // updates `didPressEnter` to present next view
-                        busLocationDAO.line = buscar
-                        didPressEnter = true
+                        if (validator.checkLineExistence(of: buscar)) {
+                            busLocationDAO.line = buscar
+                            busIsValid = true
+                            didPressEnter = true
+                        } else {
+                            busIsValid = false
+                        }
                     }
                     .padding(.bottom, 300)
+                    if(!busIsValid){
+                        Text("O ônibus \(buscar) não foi encontrado.")
+                        .tint(.white)
+                        .foregroundColor(.white)
+                    }
                     
                 }
 //                .frame(height: UIScreen.main.bounds.height)
