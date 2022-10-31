@@ -58,6 +58,7 @@ struct BuscaOnibus: View {
 
                     TextField ("Qual o seu ônibus?", text: $buscar )
                     .font(.title2)
+                    .submitLabel(.search)
                     .textFieldStyle(.plain)
                     .tint(.white)
                     .foregroundColor(.white)
