@@ -13,19 +13,6 @@ struct Proximo: View {
             Color.black
                 .ignoresSafeArea()
             VStack {
-                
-//                Button {
-//                    print("ola gabriel")
-//                } label: {
-//                    Text("Voltar")
-//                        .font(.subheadline)
-//                        .frame(width: 65, height: 40)
-//                }.buttonStyle(.borderedProminent)
-//                    .foregroundColor(.white)
-//                    .tint(Color.gray)
-//                    .frame(maxWidth: .infinity, alignment: .leading)
-//                    .padding(.top, 10)
-//                    .padding(.leading, 10)
                 Spacer()
                 
                 Text("O ônibus mais próximo é o\n107\n Com ele você chegará ao seu destino em:\n 40min")

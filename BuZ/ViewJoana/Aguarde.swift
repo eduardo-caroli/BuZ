@@ -9,46 +9,53 @@ import SwiftUI
 
 struct Aguarde: View {
     
+    @EnvironmentObject var busLocationDAO: BusLocationDAO
     @State var isWaiting: Bool = true
+    @State var nomeDaImagem: String = "AguardeTrace"
+    
+    let validator = Validator()
     
     var waitingView: some View {
         ZStack {
             Color.black .ignoresSafeArea()
+            
+            Image(nomeDaImagem)
+                .resizable()
+                .scaledToFill()
+            
             VStack {
-                
-//                Button {
-//                    print("ola gabriel")
-//                } label: {
-//                    Text("Voltar")
-//                        .font(.subheadline)
-//                        .frame(width: 65, height: 40)
-//                }.buttonStyle(.borderedProminent)
-//                    .foregroundColor(.white)
-//                    .tint(Color.gray)
-//                    .frame(maxWidth: .infinity, alignment: .leading)
-//                    .padding(.top, 10)
-//                    .padding(.leading, 10)
                 Spacer()
                 
-                Text("Aguarde o **107**\nEm: UFRJ - Praia Vermalha\nEle chegará em 5min")
+                Text("Aguarde o \(busLocationDAO.line).\n Ele chegará em \(busLocationDAO.closestBus.etaString ?? "Sem ETA")")
+                /*
+                Podemos usar o force unwrap em closestBus porque, se o usuário chegou nessa tela, já selecionou uma linha de ônibus válida.
+                 */
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
-                    .font(.title)
+                    .font(.custom("Sylexiad", size: 30))
                     .lineSpacing(10)
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom, 110)
                 Spacer()
             }
         }
     }
     
     var body: some View {
-        if isWaiting {
-            waitingView
-                .onAppear {
-                wait(seconds: 5)
+        Group {
+            if isWaiting {
+                waitingView
+                    .onAppear {
+                        wait(seconds: 5)
+                    }
+            } else {
+                Tela6()
             }
-        } else {
-            Tela6()
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: BackButton())
+        
+        
     }
     
     func wait(seconds: Int) {

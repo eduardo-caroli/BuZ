@@ -7,28 +7,44 @@
 
 import SwiftUI
 import AudioToolbox
+import CoreHaptics
+
 
 struct Tela6: View {
+    @Environment(\.dismiss) private var dismiss
+    var busNumber:Int = 107
+    var mainText:String {"Fique atento!\n O próximo ônibus\n é o \(busNumber)"}
+    @State var nomeDaImagem: String = "Tela6Trace"
+    @StateObject var hapticsHandler = HapticsHandler()
+
     var body: some View {
         ZStack {
             Color.black .ignoresSafeArea()
-            
+
+            Image(nomeDaImagem)
+                .resizable()
+                .scaledToFill()
+
             Circle()
-                .foregroundColor(.blue)
+                .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255, opacity: 80/100))
                 .padding(30)
+                .padding(.bottom,50)
             Circle()
-                .foregroundColor(.mint)
+                .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255, opacity: 68/100))
                 .padding(45)
+                .padding(.bottom,50)
             Circle()
-                .foregroundColor(.cyan)
+                .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255))
                 .padding(60)
-            Text ("O **107** \nEstá chegando\nFaça sinal")
+                .padding(.bottom,50)
+            Text ("Fique atento!\n O próximo ônibus\n é o **107**")
                 .multilineTextAlignment(.center)
                 .foregroundColor(.black)
-                .font(.largeTitle)
+                .font(.custom("Sylexiad", size: 30))
                 .lineSpacing(10)
+                .padding(.bottom,50)
         }.onAppear{
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            hapticsHandler.tocar()
         }
     }
 }

@@ -8,71 +8,88 @@
 import SwiftUI
 
 struct BuscaOnibus: View {
-    @StateObject var busLocationViewModel = BusLocationViewModel()
+    @EnvironmentObject var busLocationDAO: BusLocationDAO
     @State var buscar:String = ""
     @State var didPressEnter: Bool = false
+    @State var nomeDaImagem: String = "BuscaTrace"
+    @State var busIsValid: Bool = true
+    
+    var validator = Validator()
+    
     var body: some View {
-        ZStack {
-            Color.black .ignoresSafeArea()
-            VStack {
-               
-//                Button {
-//                    print("ola gabriel")
-//                } label: {
-//                    Text("Voltar")
-//                        .font(.subheadline)
-//                        .frame(width: 65, height: 40)
-//                }.buttonStyle(.borderedProminent)
-//                    .foregroundColor(.white)
-//                    .tint(Color.gray)
-//                    .frame(maxWidth: .infinity, alignment: .leading)
-//                    .padding(.top, 10)
-//                    .padding(.leading, 10)
-                Spacer()
-                Text("Qual o seu ônibus?")
-                    .font(.title)
+        
+        GeometryReader { geometry in
+            ZStack {
+                Color.black.ignoresSafeArea()
+                
+                VStack {
+                    
+                    Text("BuZ")
+                        .font(.custom("Gill Sans SemiBold", size: 90))
+                        .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255))
+                        .padding(.bottom, UIScreen.main.bounds.height / 10)
+                    
+                    
+                    Text("Qual o seu ônibus?")
+                        .font(.custom("Sylexiad", size: 30))
+                        .foregroundColor(.white)
+                    //                    .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.bottom, 25)
+                    
+                    
+                    NavigationLink(destination: ConfirmarOnibus(), isActive: $didPressEnter) {
+                        EmptyView()
+                        
+                    }
+                    
+                    TextField ("Buscar...", text: $buscar )
+                    .font(.title2)
+                    .textFieldStyle(.plain)
+                    .tint(.white)
                     .foregroundColor(.white)
-//                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 10)
-
-                NavigationLink(destination: MelhorTrajeto(), isActive: $didPressEnter) {
-                    EmptyView()
+                    .frame(height: 50)
+                    .padding(.horizontal, 10)
+                    .background((Color(red: 28/255, green: 28/255, blue: 28/255)), in: RoundedRectangle(cornerRadius: 10))
+                    .padding(.horizontal, 40)
+                    .onSubmit {
+                        // updates `didPressEnter` to present next view
+                        if (validator.checkLineExistence(of: buscar)) {
+                            busLocationDAO.line = buscar
+                            busIsValid = true
+                            didPressEnter = true
+                        } else {
+                            busIsValid = false
+                        }
+                    }
+                    .padding(.bottom, 300)
+                    if(!busIsValid){
+                        Text("O ônibus \(buscar) não foi encontrado.")
+                        .tint(.white)
+                        .foregroundColor(.white)
+                    }
+                    
+                }
+//                .frame(height: UIScreen.main.bounds.height)
+//                .padding(.bottom, UIScreen.main.bounds.height * 0.35)
+                .background {
+                    Image(nomeDaImagem)
+                        .resizable()
+                        .scaledToFill()
+                        .clipped()
+                        .accessibilityHidden(true)
                 }
                 
-                TextField ("Buscar...",text: $buscar) .onSubmit {
-                    // updates `didPressEnter` to present next view
-                    busLocationViewModel.line = buscar
-                    didPressEnter = true
-                }
-                .font(.subheadline)
-                .foregroundColor(.black)
-                .tint(Color.black)
-                .frame(width: 300, height: 50, alignment: .leading)
-                .padding(.leading, 10)
-                .padding(.leading, 10)
-                .textFieldStyle(.plain)
-                .background(Color.gray)
-                .cornerRadius(20)
-//                NavigationLink {
-//                    ConfirmarOnibus()
-//                } label: {
-//                    Text("Buscar")
-//                        .font(.subheadline)
-//                        .frame(width: 300, height: 50, alignment: .leading)
-//                        .padding(.leading, 10)
-//
-//
-//                }.buttonStyle(.borderedProminent)
-//                    .foregroundColor(.white)
-//                    .tint(Color.gray)
-//                    .frame(maxWidth: .infinity, alignment: .leading)
-//                    .padding(.leading, 10)
-
-                Spacer()
+                
+                
             }
+            .frame(width: geometry.size.width, height: geometry.size.height)
+            
+            
         }
+        .ignoresSafeArea(.keyboard, edges: .all)
     }
 }
+
 struct Tela_6_Previews: PreviewProvider {
     static var previews: some View {
         BuscaOnibus()
