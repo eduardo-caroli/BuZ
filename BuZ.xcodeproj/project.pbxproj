@@ -21,6 +21,7 @@
 		C00637E029087129008ADEE8 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00637DF29087129008ADEE8 /* Stop.swift */; };
 		C00637E22908716A008ADEE8 /* StopsData.json in Resources */ = {isa = PBXBuildFile; fileRef = C00637E12908716A008ADEE8 /* StopsData.json */; };
 		C00637E429087182008ADEE8 /* ViewModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00637E329087182008ADEE8 /* ViewModelExtensions.swift */; };
+		C00637EC2910429C008ADEE8 /* String2SpeechExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00637EB2910429C008ADEE8 /* String2SpeechExtension.swift */; };
 		E59A494229072471001939BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59A493F29072471001939BE /* ContentView.swift */; };
 		E59A494329072471001939BE /* HapticsDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59A494029072471001939BE /* HapticsDSL.swift */; };
 		E59A494429072471001939BE /* HapticsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59A494129072471001939BE /* HapticsHandler.swift */; };
@@ -54,6 +55,7 @@
 		C00637DF29087129008ADEE8 /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		C00637E12908716A008ADEE8 /* StopsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StopsData.json; sourceTree = "<group>"; };
 		C00637E329087182008ADEE8 /* ViewModelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelExtensions.swift; sourceTree = "<group>"; };
+		C00637EB2910429C008ADEE8 /* String2SpeechExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String2SpeechExtension.swift; sourceTree = "<group>"; };
 		E59A493F29072471001939BE /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E59A494029072471001939BE /* HapticsDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticsDSL.swift; sourceTree = "<group>"; };
 		E59A494129072471001939BE /* HapticsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticsHandler.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				AF180D9B2901E55B005ECE61 /* BusLocation */,
 				AFD3127E2909ABB7002E7DAA /* Validator.swift */,
+				C00637EB2910429C008ADEE8 /* String2SpeechExtension.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				AF1CBC7F29086769004CC865 /* BusLocator.swift in Sources */,
 				AF0A925D28FF208000EC62D9 /* BusLocationDAO.swift in Sources */,
 				E5DA0E5A28F615AA00D99780 /* Tela8.swift in Sources */,
+				C00637EC2910429C008ADEE8 /* String2SpeechExtension.swift in Sources */,
 				E5DA0E5828F615AA00D99780 /* MelhorTrajeto.swift in Sources */,
 				AF48D29628EFA3850004599F /* UserLocationViewModel.swift in Sources */,
 				E5DA0E5928F615AA00D99780 /* Tela6.swift in Sources */,
