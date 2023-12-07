@@ -28,7 +28,7 @@ struct ConfirmView: View {
                 etaBusLine
                 
                 NavigationLink{
-                    WaitingBusView()
+                    StandByView()
                 } label: {
                     Text("Confirmar")
                         .font(.custom("Sylexiad", size: 30))
@@ -39,7 +39,7 @@ struct ConfirmView: View {
                 
                 
                 NavigationLink{
-                    SearchingForBusView()
+                    QueryBusesView()
                 } label: {
                     Text("Cancelar")
                         .font(.custom("Sylexiad", size: 30))

@@ -16,6 +16,7 @@
 		AF6C54FA28EE2C7D005EEE2B /* BuZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C54F928EE2C7D005EEE2B /* BuZApp.swift */; };
 		AF6C54FE28EE2C80005EEE2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */; };
 		AF6C550128EE2C80005EEE2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */; };
+		AF9EFE852B22516800055CBD /* StandByVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9EFE842B22516800055CBD /* StandByVM.swift */; };
 		AFD3127F2909ABB7002E7DAA /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3127E2909ABB7002E7DAA /* Validator.swift */; };
 		AFE0F45A29006B4900533036 /* ETA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0F45929006B4900533036 /* ETA.swift */; };
 		C00637E029087129008ADEE8 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00637DF29087129008ADEE8 /* Stop.swift */; };
@@ -25,9 +26,9 @@
 		E59A494329072471001939BE /* HapticsDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59A494029072471001939BE /* HapticsDSL.swift */; };
 		E59A494429072471001939BE /* HapticsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59A494129072471001939BE /* HapticsHandler.swift */; };
 		E5DA0E5628F615AA00D99780 /* ConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4F28F615AA00D99780 /* ConfirmView.swift */; };
-		E5DA0E5728F615AA00D99780 /* WaitingBusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5228F615AA00D99780 /* WaitingBusView.swift */; };
+		E5DA0E5728F615AA00D99780 /* StandByView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5228F615AA00D99780 /* StandByView.swift */; };
 		E5DA0E5928F615AA00D99780 /* WarningNextBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4B28F615A900D99780 /* WarningNextBus.swift */; };
-		E5DA0E5E28F615AA00D99780 /* SearchingForBusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5128F615AA00D99780 /* SearchingForBusView.swift */; };
+		E5DA0E5E28F615AA00D99780 /* QueryBusesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5128F615AA00D99780 /* QueryBusesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		AF6C54F928EE2C7D005EEE2B /* BuZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuZApp.swift; sourceTree = "<group>"; };
 		AF6C54FD28EE2C80005EEE2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF9EFE842B22516800055CBD /* StandByVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandByVM.swift; sourceTree = "<group>"; };
 		AFD3127E2909ABB7002E7DAA /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		AFE0F45929006B4900533036 /* ETA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETA.swift; sourceTree = "<group>"; };
 		C00637DF29087129008ADEE8 /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
@@ -52,8 +54,8 @@
 		E59A494129072471001939BE /* HapticsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticsHandler.swift; sourceTree = "<group>"; };
 		E5DA0E4B28F615A900D99780 /* WarningNextBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningNextBus.swift; sourceTree = "<group>"; };
 		E5DA0E4F28F615AA00D99780 /* ConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmView.swift; sourceTree = "<group>"; };
-		E5DA0E5128F615AA00D99780 /* SearchingForBusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingForBusView.swift; sourceTree = "<group>"; };
-		E5DA0E5228F615AA00D99780 /* WaitingBusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingBusView.swift; sourceTree = "<group>"; };
+		E5DA0E5128F615AA00D99780 /* QueryBusesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryBusesView.swift; sourceTree = "<group>"; };
+		E5DA0E5228F615AA00D99780 /* StandByView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandByView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				E59A494029072471001939BE /* HapticsDSL.swift */,
 				AF48D29528EFA3850004599F /* UserLocationViewModel.swift */,
 				C00637E329087182008ADEE8 /* ViewModelExtensions.swift */,
+				AF9EFE842B22516800055CBD /* StandByVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -160,8 +163,8 @@
 		E5DA0E4A28F6158800D99780 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E5DA0E5228F615AA00D99780 /* WaitingBusView.swift */,
-				E5DA0E5128F615AA00D99780 /* SearchingForBusView.swift */,
+				E5DA0E5228F615AA00D99780 /* StandByView.swift */,
+				E5DA0E5128F615AA00D99780 /* QueryBusesView.swift */,
 				E5DA0E4F28F615AA00D99780 /* ConfirmView.swift */,
 				E5DA0E4B28F615A900D99780 /* WarningNextBus.swift */,
 			);
@@ -249,13 +252,14 @@
 				C00637EC2910429C008ADEE8 /* String2SpeechExtension.swift in Sources */,
 				AF48D29628EFA3850004599F /* UserLocationViewModel.swift in Sources */,
 				E5DA0E5928F615AA00D99780 /* WarningNextBus.swift in Sources */,
-				E5DA0E5E28F615AA00D99780 /* SearchingForBusView.swift in Sources */,
+				E5DA0E5E28F615AA00D99780 /* QueryBusesView.swift in Sources */,
 				C00637E029087129008ADEE8 /* Stop.swift in Sources */,
 				AF1E1F882903489300582D3A /* etaString.swift in Sources */,
 				AF180D9F2901E6CE005ECE61 /* Equatable.swift in Sources */,
-				E5DA0E5728F615AA00D99780 /* WaitingBusView.swift in Sources */,
+				E5DA0E5728F615AA00D99780 /* StandByView.swift in Sources */,
 				AF6C54FA28EE2C7D005EEE2B /* BuZApp.swift in Sources */,
 				AFD3127F2909ABB7002E7DAA /* Validator.swift in Sources */,
+				AF9EFE852B22516800055CBD /* StandByVM.swift in Sources */,
 				AFE0F45A29006B4900533036 /* ETA.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
