@@ -22,18 +22,12 @@
 		C00637E22908716A008ADEE8 /* StopsData.json in Resources */ = {isa = PBXBuildFile; fileRef = C00637E12908716A008ADEE8 /* StopsData.json */; };
 		C00637E429087182008ADEE8 /* ViewModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00637E329087182008ADEE8 /* ViewModelExtensions.swift */; };
 		C00637EC2910429C008ADEE8 /* String2SpeechExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00637EB2910429C008ADEE8 /* String2SpeechExtension.swift */; };
-		E59A494229072471001939BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59A493F29072471001939BE /* ContentView.swift */; };
 		E59A494329072471001939BE /* HapticsDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59A494029072471001939BE /* HapticsDSL.swift */; };
 		E59A494429072471001939BE /* HapticsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59A494129072471001939BE /* HapticsHandler.swift */; };
 		E5DA0E4928F6142500D99780 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4828F6142500D99780 /* App.swift */; };
-		E5DA0E5528F615AA00D99780 /* Pra onde vc vai.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5428F615AA00D99780 /* Pra onde vc vai.swift */; };
 		E5DA0E5628F615AA00D99780 /* ConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4F28F615AA00D99780 /* ConfirmView.swift */; };
 		E5DA0E5728F615AA00D99780 /* WaitingBusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5228F615AA00D99780 /* WaitingBusView.swift */; };
-		E5DA0E5828F615AA00D99780 /* MelhorTrajeto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5328F615AA00D99780 /* MelhorTrajeto.swift */; };
 		E5DA0E5928F615AA00D99780 /* WarningNextBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4B28F615A900D99780 /* WarningNextBus.swift */; };
-		E5DA0E5A28F615AA00D99780 /* Tela8.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4C28F615AA00D99780 /* Tela8.swift */; };
-		E5DA0E5B28F615AA00D99780 /* Tela7.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5028F615AA00D99780 /* Tela7.swift */; };
-		E5DA0E5C28F615AA00D99780 /* Todas as opções.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4D28F615AA00D99780 /* Todas as opções.swift */; };
 		E5DA0E5D28F615AA00D99780 /* Proximo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4E28F615AA00D99780 /* Proximo.swift */; };
 		E5DA0E5E28F615AA00D99780 /* SearchingForBusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5128F615AA00D99780 /* SearchingForBusView.swift */; };
 /* End PBXBuildFile section */
@@ -56,20 +50,14 @@
 		C00637E12908716A008ADEE8 /* StopsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StopsData.json; sourceTree = "<group>"; };
 		C00637E329087182008ADEE8 /* ViewModelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelExtensions.swift; sourceTree = "<group>"; };
 		C00637EB2910429C008ADEE8 /* String2SpeechExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String2SpeechExtension.swift; sourceTree = "<group>"; };
-		E59A493F29072471001939BE /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E59A494029072471001939BE /* HapticsDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticsDSL.swift; sourceTree = "<group>"; };
 		E59A494129072471001939BE /* HapticsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticsHandler.swift; sourceTree = "<group>"; };
 		E5DA0E4828F6142500D99780 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		E5DA0E4B28F615A900D99780 /* WarningNextBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningNextBus.swift; sourceTree = "<group>"; };
-		E5DA0E4C28F615AA00D99780 /* Tela8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela8.swift; sourceTree = "<group>"; };
-		E5DA0E4D28F615AA00D99780 /* Todas as opções.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todas as opções.swift"; sourceTree = "<group>"; };
 		E5DA0E4E28F615AA00D99780 /* Proximo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proximo.swift; sourceTree = "<group>"; };
 		E5DA0E4F28F615AA00D99780 /* ConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmView.swift; sourceTree = "<group>"; };
-		E5DA0E5028F615AA00D99780 /* Tela7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela7.swift; sourceTree = "<group>"; };
 		E5DA0E5128F615AA00D99780 /* SearchingForBusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingForBusView.swift; sourceTree = "<group>"; };
 		E5DA0E5228F615AA00D99780 /* WaitingBusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingBusView.swift; sourceTree = "<group>"; };
-		E5DA0E5328F615AA00D99780 /* MelhorTrajeto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelhorTrajeto.swift; sourceTree = "<group>"; };
-		E5DA0E5428F615AA00D99780 /* Pra onde vc vai.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pra onde vc vai.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +104,6 @@
 		AF48D2A328EFBEE10004599F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E59A493F29072471001939BE /* ContentView.swift */,
 				E59A494129072471001939BE /* HapticsHandler.swift */,
 				E59A494029072471001939BE /* HapticsDSL.swift */,
 				AF48D29528EFA3850004599F /* UserLocationViewModel.swift */,
@@ -181,13 +168,8 @@
 				E5DA0E5228F615AA00D99780 /* WaitingBusView.swift */,
 				E5DA0E5128F615AA00D99780 /* SearchingForBusView.swift */,
 				E5DA0E4F28F615AA00D99780 /* ConfirmView.swift */,
-				E5DA0E5328F615AA00D99780 /* MelhorTrajeto.swift */,
-				E5DA0E5428F615AA00D99780 /* Pra onde vc vai.swift */,
 				E5DA0E4E28F615AA00D99780 /* Proximo.swift */,
 				E5DA0E4B28F615A900D99780 /* WarningNextBus.swift */,
-				E5DA0E5028F615AA00D99780 /* Tela7.swift */,
-				E5DA0E4C28F615AA00D99780 /* Tela8.swift */,
-				E5DA0E4D28F615AA00D99780 /* Todas as opções.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,20 +246,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C00637E429087182008ADEE8 /* ViewModelExtensions.swift in Sources */,
-				E5DA0E5528F615AA00D99780 /* Pra onde vc vai.swift in Sources */,
 				E59A494429072471001939BE /* HapticsHandler.swift in Sources */,
 				E5DA0E5628F615AA00D99780 /* ConfirmView.swift in Sources */,
-				E5DA0E5C28F615AA00D99780 /* Todas as opções.swift in Sources */,
 				E5DA0E4928F6142500D99780 /* App.swift in Sources */,
 				E59A494329072471001939BE /* HapticsDSL.swift in Sources */,
 				AF48D2A528EFBEEE0004599F /* Bus.swift in Sources */,
-				E5DA0E5B28F615AA00D99780 /* Tela7.swift in Sources */,
-				E59A494229072471001939BE /* ContentView.swift in Sources */,
 				AF1CBC7F29086769004CC865 /* BusLocator.swift in Sources */,
 				AF0A925D28FF208000EC62D9 /* BusLocationDAO.swift in Sources */,
-				E5DA0E5A28F615AA00D99780 /* Tela8.swift in Sources */,
 				C00637EC2910429C008ADEE8 /* String2SpeechExtension.swift in Sources */,
-				E5DA0E5828F615AA00D99780 /* MelhorTrajeto.swift in Sources */,
 				AF48D29628EFA3850004599F /* UserLocationViewModel.swift in Sources */,
 				E5DA0E5928F615AA00D99780 /* WarningNextBus.swift in Sources */,
 				E5DA0E5E28F615AA00D99780 /* SearchingForBusView.swift in Sources */,
