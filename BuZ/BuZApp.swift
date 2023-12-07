@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct BuZApp: App {
+struct BuZ: App {
     @StateObject var busLocationDAO = BusLocationDAO()
     
     var body: some Scene {

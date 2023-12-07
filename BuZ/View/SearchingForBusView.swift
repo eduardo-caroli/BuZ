@@ -24,18 +24,10 @@ struct SearchingForBusView: View {
                 Color.black.ignoresSafeArea()
                 
                 VStack {
-                    
-                    
-                    
-                    //                    Text("BuZ")
-                    //                        .font(.custom("Gill Sans SemiBold", size: 90))
-                    //                        .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255))
-                    //                        .padding(.bottom, UIScreen.main.bounds.height / 10)
                     Image(BuzLogo)
                         .resizable()
                         .scaledToFit()
                         .frame(height: 75)
-                    //  .aspectRatio(1, contentMode: .fit)
                         .clipped()
                         .accessibilityHidden(false)
                         .accessibilityLabel("Buz")
@@ -45,7 +37,6 @@ struct SearchingForBusView: View {
                 
                         .font(.custom("Sylexiad", size: 30))
                         .foregroundColor(.white)
-                    //                    .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.bottom, 25)
                         .accessibilityHidden(true)
                     
@@ -67,7 +58,6 @@ struct SearchingForBusView: View {
                     .background((Color(red: 28/255, green: 28/255, blue: 28/255)), in: RoundedRectangle(cornerRadius: 10))
                     .padding(.horizontal, 40)
                     .onSubmit {
-                        // updates `didPressEnter` to present next view
                         if (validator.checkLineExistence(of: buscar)) {
                             busLocationDAO.line = buscar
                             busIsValid = true
@@ -81,11 +71,6 @@ struct SearchingForBusView: View {
                     }
                     .padding(.bottom, 300)
                 }
-//                .frame(height: UIScreen.main.bounds.height)
-//                .padding(.bottom, UIScreen.main.bounds.height * 0.35)
-                
-                    
-                
                 .background {
                     Image(nomeDaImagem)
                         .resizable()

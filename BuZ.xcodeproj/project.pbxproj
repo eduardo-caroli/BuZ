@@ -24,11 +24,9 @@
 		C00637EC2910429C008ADEE8 /* String2SpeechExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00637EB2910429C008ADEE8 /* String2SpeechExtension.swift */; };
 		E59A494329072471001939BE /* HapticsDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59A494029072471001939BE /* HapticsDSL.swift */; };
 		E59A494429072471001939BE /* HapticsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59A494129072471001939BE /* HapticsHandler.swift */; };
-		E5DA0E4928F6142500D99780 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4828F6142500D99780 /* App.swift */; };
 		E5DA0E5628F615AA00D99780 /* ConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4F28F615AA00D99780 /* ConfirmView.swift */; };
 		E5DA0E5728F615AA00D99780 /* WaitingBusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5228F615AA00D99780 /* WaitingBusView.swift */; };
 		E5DA0E5928F615AA00D99780 /* WarningNextBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4B28F615A900D99780 /* WarningNextBus.swift */; };
-		E5DA0E5D28F615AA00D99780 /* Proximo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E4E28F615AA00D99780 /* Proximo.swift */; };
 		E5DA0E5E28F615AA00D99780 /* SearchingForBusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA0E5128F615AA00D99780 /* SearchingForBusView.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,9 +50,7 @@
 		C00637EB2910429C008ADEE8 /* String2SpeechExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String2SpeechExtension.swift; sourceTree = "<group>"; };
 		E59A494029072471001939BE /* HapticsDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticsDSL.swift; sourceTree = "<group>"; };
 		E59A494129072471001939BE /* HapticsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticsHandler.swift; sourceTree = "<group>"; };
-		E5DA0E4828F6142500D99780 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		E5DA0E4B28F615A900D99780 /* WarningNextBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningNextBus.swift; sourceTree = "<group>"; };
-		E5DA0E4E28F615AA00D99780 /* Proximo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proximo.swift; sourceTree = "<group>"; };
 		E5DA0E4F28F615AA00D99780 /* ConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmView.swift; sourceTree = "<group>"; };
 		E5DA0E5128F615AA00D99780 /* SearchingForBusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingForBusView.swift; sourceTree = "<group>"; };
 		E5DA0E5228F615AA00D99780 /* WaitingBusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingBusView.swift; sourceTree = "<group>"; };
@@ -164,11 +160,9 @@
 		E5DA0E4A28F6158800D99780 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E5DA0E4828F6142500D99780 /* App.swift */,
 				E5DA0E5228F615AA00D99780 /* WaitingBusView.swift */,
 				E5DA0E5128F615AA00D99780 /* SearchingForBusView.swift */,
 				E5DA0E4F28F615AA00D99780 /* ConfirmView.swift */,
-				E5DA0E4E28F615AA00D99780 /* Proximo.swift */,
 				E5DA0E4B28F615A900D99780 /* WarningNextBus.swift */,
 			);
 			path = View;
@@ -248,7 +242,6 @@
 				C00637E429087182008ADEE8 /* ViewModelExtensions.swift in Sources */,
 				E59A494429072471001939BE /* HapticsHandler.swift in Sources */,
 				E5DA0E5628F615AA00D99780 /* ConfirmView.swift in Sources */,
-				E5DA0E4928F6142500D99780 /* App.swift in Sources */,
 				E59A494329072471001939BE /* HapticsDSL.swift in Sources */,
 				AF48D2A528EFBEEE0004599F /* Bus.swift in Sources */,
 				AF1CBC7F29086769004CC865 /* BusLocator.swift in Sources */,
@@ -264,7 +257,6 @@
 				AF6C54FA28EE2C7D005EEE2B /* BuZApp.swift in Sources */,
 				AFD3127F2909ABB7002E7DAA /* Validator.swift in Sources */,
 				AFE0F45A29006B4900533036 /* ETA.swift in Sources */,
-				E5DA0E5D28F615AA00D99780 /* Proximo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

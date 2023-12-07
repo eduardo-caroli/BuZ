@@ -16,6 +16,8 @@ class Bus: Codable{
     var velocidade: String
     var dataHora: String
     var eta: Double?
+    var dataHoraEnvio: String
+    var dataHoraServidor: String
     
     var location: CLLocation?{
         guard let latitude  = Double(self.latitude),
@@ -26,6 +28,18 @@ class Bus: Codable{
         return CLLocation(latitude: clLatitude, longitude: clLongitude)
     }
 
+    
+    enum CodingKeys: String, CodingKey {
+        case ordem = "ordem"
+        case latitude = "latitude"
+        case longitude = "longitude"
+        case dataHora = "datahora"
+        case velocidade = "velocidade"
+        case linha = "linha"
+        case dataHoraEnvio = "datahoraenvio"
+        case dataHoraServidor = "datahoraservidor"
+    }
+    
     init(ordem: String, linha: String, latitude: String, longitude: String, velocidade: String, dataHora: String, eta: Double? = nil) {
         self.ordem = ordem
         self.linha = linha
@@ -34,6 +48,9 @@ class Bus: Codable{
         self.velocidade = velocidade
         self.dataHora = dataHora
         self.eta = eta
+        self.dataHoraEnvio = ""
+        self.dataHoraServidor = ""
+        
     }
     
     var lastReadingTime: Date?
@@ -45,6 +62,8 @@ class Bus: Codable{
         self.longitude =  ""
         self.velocidade =  ""
         self.dataHora =  ""
+        self.dataHoraEnvio = ""
+        self.dataHoraServidor = ""
     }
 }
 
