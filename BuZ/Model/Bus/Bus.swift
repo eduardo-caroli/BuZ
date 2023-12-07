@@ -65,6 +65,25 @@ class Bus: Codable{
         self.dataHoraEnvio = ""
         self.dataHoraServidor = ""
     }
+    
+    private func fetchBusDataFromAPI() async -> Data? {
+        let session = URLSession(configuration: URLSessionConfiguration.ephemeral)
+        guard let url = URL(string: "https://dados.mobilidade.rio/gps/sppo")
+        else { return nil }
+        
+        return await withCheckedContinuation { (continuation: CheckedContinuation<Data?, Never>) in
+            session.dataTask(with: url) { data, response, error in
+                guard error == nil, let data = data else {continuation.resume(returning: nil); return}
+                continuation.resume(returning: data)
+            }
+        }
+    }
+    
+    private func decodeBusData(_ data: Data) throws -> [Bus] {
+        let decoder = JSONDecoder()
+        let buses = try decoder.decode([Bus].self, from: data)
+        return buses
+    }
 }
 
 extension Array where Element == Bus {
