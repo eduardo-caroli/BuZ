@@ -11,35 +11,22 @@ import SwiftUI
 struct ConfirmView: View {
     
     
-
+    
     @EnvironmentObject var busLocationDAO: BusLocationDAO
     var busLine:String {busLocationDAO.line}
-    var busATA:String { "1000 min" }
-    @State var nomeDaImagem: String = "ConfirmarTrace"
-
+    var busETA: String {(busLocationDAO.closestBus.etaString)!}
+    @State var confirmTraceImg: String = "ConfirmarTrace"
+    
     var body: some View {
         ZStack {
             Color.black
                 .ignoresSafeArea()
-
-            Image(nomeDaImagem)
-                .resizable()
-                .scaledToFill()
-                .accessibilityHidden(true)
-
+            traceImage
+            
             VStack {
                 Spacer()
-
-                Text("O \(busLocationDAO.line) chegará em \(busLocationDAO.closestBus.etaString ?? "sem ETA")")
-                    .font(.custom("Sylexiad", size: 30))
-                    .foregroundColor(.white)
-                    .padding(.top, 180)
-                    .padding(.horizontal, 15)
-                    .multilineTextAlignment(.center)
-                    .padding(.bottom, 40)
-                    .background(.black.opacity(0.01))
-                    .accessibilityAddTraits(.isStaticText)
-
+                etaBusLine
+                
                 NavigationLink{
                     WaitingBusView()
                 } label: {
@@ -49,8 +36,8 @@ struct ConfirmView: View {
                 }.buttonStyle(.borderedProminent)
                     .foregroundColor (.black)
                     .tint(Color(red: 181/255, green: 215/255, blue: 255/255))
-
-
+                
+                
                 NavigationLink{
                     SearchingForBusView()
                 } label: {
@@ -60,7 +47,7 @@ struct ConfirmView: View {
                 }.buttonStyle(.borderedProminent)
                     .foregroundColor(.white)
                     .tint(Color(red: 28/255, green: 28/255, blue: 28/255))
-
+                
                     .padding(.bottom, 170)
                 Spacer()
             }
@@ -69,7 +56,31 @@ struct ConfirmView: View {
             .accessibilitySortPriority(2)
         }
     }
+    
+    var traceImage: some View {
+        Image(confirmTraceImg)
+            .resizable()
+            .scaledToFill()
+            .accessibilityHidden(true)
+    }
+    var etaBusLine: some View {
+        
+        Text("O \(busLine) chegará em \(busLocationDAO.closestBus.etaString ?? "sem ETA")")
+        
+            .font(.custom("Sylexiad", size: 30))
+            .foregroundColor(.white)
+            .padding(.top, 180)
+            .padding(.horizontal, 15)
+            .multilineTextAlignment(.center)
+            .padding(.bottom, 40)
+            .background(.black.opacity(0.01))
+            .accessibilityAddTraits(.isStaticText)
+    }
+    
+    
 }
+
+
 
 struct BackButton: View {
     @Environment(\.dismiss) private var dismiss
