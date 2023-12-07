@@ -7,7 +7,7 @@
 import SwiftUI
 import AVFoundation
 
-struct BuscaOnibus: View {
+struct SearchingForBusView: View {
     @EnvironmentObject var busLocationDAO: BusLocationDAO
     @State var buscar:String = ""
     @State var didPressEnter: Bool = false
@@ -15,7 +15,7 @@ struct BuscaOnibus: View {
     @State var busIsValid: Bool = true
     @State var textfieldPlaceholder: String = "Qual o seu ônibus?"
     var validator = Validator()
-    @State var nomeDaImagem2: String = "Buz"
+    @State var BuzLogo: String = "Buz"
    
     var body: some View {
         
@@ -31,7 +31,7 @@ struct BuscaOnibus: View {
                     //                        .font(.custom("Gill Sans SemiBold", size: 90))
                     //                        .foregroundColor(Color(red: 181/255, green: 215/255, blue: 255/255))
                     //                        .padding(.bottom, UIScreen.main.bounds.height / 10)
-                    Image(nomeDaImagem2)
+                    Image(BuzLogo)
                         .resizable()
                         .scaledToFit()
                         .frame(height: 75)
@@ -50,7 +50,7 @@ struct BuscaOnibus: View {
                         .accessibilityHidden(true)
                     
                     
-                    NavigationLink(destination: ConfirmarOnibus(), isActive: $didPressEnter) {
+                    NavigationLink(destination: ConfirmView(), isActive: $didPressEnter) {
                         EmptyView()
                         
                     }
@@ -111,6 +111,6 @@ struct BuscaOnibus: View {
 
 struct Tela_6_Previews: PreviewProvider {
     static var previews: some View {
-        BuscaOnibus()
+        SearchingForBusView()
     }
 }

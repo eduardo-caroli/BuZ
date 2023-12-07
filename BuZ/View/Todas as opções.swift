@@ -16,7 +16,7 @@ struct TodasAsOpcoes: View {
                              
         
                              NavigationLink {
-                                 ConfirmarOnibus()
+                                 ConfirmView()
                              } label: {
                                  Text("**107**        Sai em 5min\n          De: UFRJ - Praia Vermelha\n Chega em seu destino: 15:15h")
                                      .font(.title2)
@@ -26,7 +26,7 @@ struct TodasAsOpcoes: View {
                                  .tint(Color.gray)
                          
                            NavigationLink {
-                               ConfirmarOnibus()
+                               ConfirmView()
                             } label: {
                                 Text("**107**        Sai em 5min\n          De: UFRJ - Praia Vermelha\n Chega em seu destino: 15:15h")
                                     .font(.title2)
@@ -36,7 +36,7 @@ struct TodasAsOpcoes: View {
                                 .tint(Color.gray)
                             
                              NavigationLink {
-                                ConfirmarOnibus()
+                                ConfirmView()
                             } label: {
                                 Text("**107**        Sai em 5min\n          De: UFRJ - Praia Vermelha\n Chega em seu destino: 15:15h")
                                     .font(.title2)
@@ -46,7 +46,7 @@ struct TodasAsOpcoes: View {
                                 .tint(Color.gray)
                             
                              NavigationLink {
-                                 ConfirmarOnibus()
+                                 ConfirmView()
                             } label: {
                                 Text("**107**        Sai em 5min\n          De: UFRJ - Praia Vermelha\n Chega em seu destino: 15:15h")
                                     .font(.title2)

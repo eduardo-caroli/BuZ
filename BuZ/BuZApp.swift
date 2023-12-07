@@ -14,7 +14,7 @@ struct BuZApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                BuscaOnibus()
+                SearchingForBusView()
             }
             .environmentObject(busLocationDAO)
             .environment(\.locale, Locale(identifier: "pt-BR"))

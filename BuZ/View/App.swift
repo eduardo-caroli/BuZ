@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Menu: View {
+struct App: View {
     var body: some View {
         
              ZStack {
@@ -20,7 +20,7 @@ struct Menu: View {
                      
 
                    NavigationLink {
-                       BuscaOnibus()
+                       SearchingForBusView()
                     } label: {
                         Text("Buscar Ônibus")
                             .font(.title)
@@ -40,6 +40,6 @@ struct Menu: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Menu()
+        App()
     }
 }

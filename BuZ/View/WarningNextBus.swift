@@ -10,7 +10,7 @@ import AudioToolbox
 import CoreHaptics
 
 
-struct Tela6: View {
+struct WarningNextBus: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var busLocationDAO: BusLocationDAO
     @State var nomeDaImagem: String = "Tela6Trace"
@@ -78,6 +78,6 @@ struct Tela6: View {
 
 struct Tela6_Previews: PreviewProvider {
     static var previews: some View {
-        Tela6()
+        WarningNextBus()
     }
 }

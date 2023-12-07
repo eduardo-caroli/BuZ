@@ -37,6 +37,8 @@ class BusLocator: ObservableObject{
     private func callAPI(at dispareTime:DispatchTime = DispatchTime.now(), for line:String) {
         guard !isDead,
               let url = URL(string: "https://jeap.rio.rj.gov.br/dadosAbertosAPI/v2/transporte/veiculos/onibus2")
+                //https://dados.mobilidade.rio/gps/sppo -> Link atualizado
+                //https://jeap.rio.rj.gov.br/dadosAbertosAPI/v2/transporte/veiculos/onibus2
         else{return}
         DispatchQueue.global().asyncAfter(deadline: dispareTime) {
             self.cancellable = URLSession.shared.dataTaskPublisher(for: url)

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Aguarde: View {
+struct WaitingBusView: View {
     
     @EnvironmentObject var busLocationDAO: BusLocationDAO
     @State var isWaiting: Bool = true
@@ -49,7 +49,7 @@ struct Aguarde: View {
                         wait(seconds: 5)
                     }
             } else {
-                Tela6()
+                WarningNextBus()
             }
         }
         .navigationBarBackButtonHidden(true)
@@ -68,7 +68,7 @@ struct Aguarde: View {
     
     struct Aguarde_Previews: PreviewProvider {
         static var previews: some View {
-            Aguarde()
+            WaitingBusView()
         }
     }
 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct ConfirmarOnibus: View {
+struct ConfirmView: View {
     
     
 
@@ -41,7 +41,7 @@ struct ConfirmarOnibus: View {
                     .accessibilityAddTraits(.isStaticText)
 
                 NavigationLink{
-                    Aguarde()
+                    WaitingBusView()
                 } label: {
                     Text("Confirmar")
                         .font(.custom("Sylexiad", size: 30))
@@ -52,7 +52,7 @@ struct ConfirmarOnibus: View {
 
 
                 NavigationLink{
-                    BuscaOnibus()
+                    SearchingForBusView()
                 } label: {
                     Text("Cancelar")
                         .font(.custom("Sylexiad", size: 30))
@@ -91,6 +91,6 @@ struct BackButton: View {
 
 struct ConfirmarOnibus_Previews: PreviewProvider {
     static var previews: some View {
-        ConfirmarOnibus()
+        ConfirmView()
     }
 }

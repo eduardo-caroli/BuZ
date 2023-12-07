@@ -22,7 +22,7 @@ struct Proximo: View {
                     .multilineTextAlignment(.center)
                 
                 NavigationLink{
-                  Aguarde()
+                  WaitingBusView()
                 } label: {
                     Text("Confirmar")
                         .font(.title)
