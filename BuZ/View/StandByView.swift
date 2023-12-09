@@ -11,7 +11,7 @@ import SwiftUI
 ///The view presents the bus's line and ETA in minutes and seconds.
 struct StandByView: View {
     
-    @StateObject var vm = StandByVM()
+    @StateObject var vm = BusLocationVM()
     
     let backgroundImageName: String = "AguardeTrace"
     

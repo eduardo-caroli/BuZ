@@ -8,7 +8,7 @@ import SwiftUI
 import AVFoundation
 
 struct QueryBusesView: View {
-    @StateObject var vm: StandByVM = StandByVM()
+    @StateObject var vm: BusLocationVM = BusLocationVM()
     @State var queriedLine: String = ""
     @State var didPressEnter: Bool = false
     @State var queriedLineNotFound: Bool = false

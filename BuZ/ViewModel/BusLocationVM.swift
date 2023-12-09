@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class StandByVM: ObservableObject {
+class BusLocationVM: ObservableObject {
     @EnvironmentObject var busLocationDAO: BusLocationDAO
     @Published var trackedLine: String
     @Published var shortestETA: String
