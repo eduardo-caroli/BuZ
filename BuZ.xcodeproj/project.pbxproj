@@ -18,7 +18,9 @@
 		AF6C550128EE2C80005EEE2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */; };
 		AF9EFE852B22516800055CBD /* BusLocationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9EFE842B22516800055CBD /* BusLocationVM.swift */; };
 		AFD3127F2909ABB7002E7DAA /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3127E2909ABB7002E7DAA /* Validator.swift */; };
-		AFE0F45A29006B4900533036 /* ETA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0F45929006B4900533036 /* ETA.swift */; };
+		AFE0F45A29006B4900533036 /* ETABusLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0F45929006B4900533036 /* ETABusLocator.swift */; };
+		AFFFEA562B23AAC600ED8E6D /* ETA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFEA552B23AAC600ED8E6D /* ETA.swift */; };
+		AFFFEA592B279D8700ED8E6D /* CollectionConcurrencyKit in Frameworks */ = {isa = PBXBuildFile; productRef = AFFFEA582B279D8700ED8E6D /* CollectionConcurrencyKit */; };
 		C00637E029087129008ADEE8 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00637DF29087129008ADEE8 /* Stop.swift */; };
 		C00637E22908716A008ADEE8 /* StopsData.json in Resources */ = {isa = PBXBuildFile; fileRef = C00637E12908716A008ADEE8 /* StopsData.json */; };
 		C00637E429087182008ADEE8 /* ViewModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00637E329087182008ADEE8 /* ViewModelExtensions.swift */; };
@@ -45,7 +47,8 @@
 		AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF9EFE842B22516800055CBD /* BusLocationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusLocationVM.swift; sourceTree = "<group>"; };
 		AFD3127E2909ABB7002E7DAA /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		AFE0F45929006B4900533036 /* ETA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETA.swift; sourceTree = "<group>"; };
+		AFE0F45929006B4900533036 /* ETABusLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETABusLocator.swift; sourceTree = "<group>"; };
+		AFFFEA552B23AAC600ED8E6D /* ETA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETA.swift; sourceTree = "<group>"; };
 		C00637DF29087129008ADEE8 /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		C00637E12908716A008ADEE8 /* StopsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StopsData.json; sourceTree = "<group>"; };
 		C00637E329087182008ADEE8 /* ViewModelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelExtensions.swift; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFFFEA592B279D8700ED8E6D /* CollectionConcurrencyKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				AF0A925C28FF208000EC62D9 /* BusLocationDAO.swift */,
-				AFE0F45929006B4900533036 /* ETA.swift */,
+				AFE0F45929006B4900533036 /* ETABusLocator.swift */,
 				AF1CBC7E29086769004CC865 /* BusLocator.swift */,
 			);
 			path = BusLocation;
@@ -114,8 +118,8 @@
 		AF48D2A628EFBEF60004599F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C00637DF29087129008ADEE8 /* Stop.swift */,
-				C00637E12908716A008ADEE8 /* StopsData.json */,
+				AFFFEA552B23AAC600ED8E6D /* ETA.swift */,
+				AFFFEA542B23AAB800ED8E6D /* Stop */,
 				AF180DA02901E6D5005ECE61 /* Bus */,
 			);
 			path = Model;
@@ -160,6 +164,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AFFFEA542B23AAB800ED8E6D /* Stop */ = {
+			isa = PBXGroup;
+			children = (
+				C00637DF29087129008ADEE8 /* Stop.swift */,
+				C00637E12908716A008ADEE8 /* StopsData.json */,
+			);
+			path = Stop;
+			sourceTree = "<group>";
+		};
 		E5DA0E4A28F6158800D99780 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +200,9 @@
 			dependencies = (
 			);
 			name = BuZ;
+			packageProductDependencies = (
+				AFFFEA582B279D8700ED8E6D /* CollectionConcurrencyKit */,
+			);
 			productName = BuZ;
 			productReference = AF6C54F628EE2C7D005EEE2B /* BuZ.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +231,9 @@
 				"pt-BR",
 			);
 			mainGroup = AF6C54ED28EE2C7D005EEE2B;
+			packageReferences = (
+				AFFFEA572B279D8700ED8E6D /* XCRemoteSwiftPackageReference "CollectionConcurrencyKit" */,
+			);
 			productRefGroup = AF6C54F728EE2C7D005EEE2B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -248,6 +267,7 @@
 				E59A494329072471001939BE /* HapticsDSL.swift in Sources */,
 				AF48D2A528EFBEEE0004599F /* Bus.swift in Sources */,
 				AF1CBC7F29086769004CC865 /* BusLocator.swift in Sources */,
+				AFFFEA562B23AAC600ED8E6D /* ETA.swift in Sources */,
 				AF0A925D28FF208000EC62D9 /* BusLocationDAO.swift in Sources */,
 				C00637EC2910429C008ADEE8 /* String2SpeechExtension.swift in Sources */,
 				AF48D29628EFA3850004599F /* UserLocationViewModel.swift in Sources */,
@@ -260,7 +280,7 @@
 				AF6C54FA28EE2C7D005EEE2B /* BuZApp.swift in Sources */,
 				AFD3127F2909ABB7002E7DAA /* Validator.swift in Sources */,
 				AF9EFE852B22516800055CBD /* BusLocationVM.swift in Sources */,
-				AFE0F45A29006B4900533036 /* ETA.swift in Sources */,
+				AFE0F45A29006B4900533036 /* ETABusLocator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +487,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AFFFEA572B279D8700ED8E6D /* XCRemoteSwiftPackageReference "CollectionConcurrencyKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JohnSundell/CollectionConcurrencyKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AFFFEA582B279D8700ED8E6D /* CollectionConcurrencyKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFFFEA572B279D8700ED8E6D /* XCRemoteSwiftPackageReference "CollectionConcurrencyKit" */;
+			productName = CollectionConcurrencyKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF6C54EE28EE2C7D005EEE2B /* Project object */;
 }

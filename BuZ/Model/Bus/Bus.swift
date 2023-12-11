@@ -66,6 +66,15 @@ class Bus: Codable{
         self.dataHoraServidor = ""
     }
     
+    func fetchETA(to userLocation: (Double, Double)) async -> ETA? {
+        guard let latitude = self.latitude.asDouble,
+              let longitude = self.longitude.asDouble
+        else { return nil }
+        return await ETA.from(origin: (latitude, longitude),
+                                 to: userLocation)
+        
+    }
+    
     private static func fetchBusDataFromAPI() async -> Data? {
         let session = URLSession(configuration: URLSessionConfiguration.ephemeral)
         guard let url = URL(string: "https://dados.mobilidade.rio/gps/sppo")
@@ -109,5 +118,11 @@ extension Array where Element == Bus {
         var dic:[String:Bus] = [:]
         self.forEach {dic[$0.ordem] = $0}
         return dic
+    }
+}
+
+extension String {
+    var asDouble: Double? {
+        return Double(self.replacingOccurrences(of: ",", with: "."))
     }
 }

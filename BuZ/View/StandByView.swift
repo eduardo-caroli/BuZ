@@ -12,7 +12,15 @@ import SwiftUI
 struct StandByView: View {
     
     @StateObject var vm = BusLocationVM()
-    
+    var etaText: String {
+        if let shortestETA = vm.shortestETA {
+            let formatter = DateComponentsFormatter()
+            formatter.allowedUnits = [.minute, .second]
+            formatter.unitsStyle = .abbreviated
+            return "Aguarde o \(vm.trackedLine).\n Ele chegará em \(formatter.string(from: shortestETA))"
+        }
+        return "Sem ETA disponível para a linha"
+    }
     let backgroundImageName: String = "AguardeTrace"
     
     var body: some View {
@@ -46,7 +54,7 @@ struct StandByView: View {
     }
     
     var standByText: some View {
-        Text("Aguarde o \(vm.trackedLine).\n Ele chegará em \(vm.shortestETA)")
+        Text(etaText)
             .multilineTextAlignment(.center)
             .foregroundColor(.white)
             .font(.custom("Sylexiad", size: 30))
