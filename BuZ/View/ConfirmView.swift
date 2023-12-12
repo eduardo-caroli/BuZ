@@ -12,10 +12,20 @@ struct ConfirmView: View {
     
     
 
-    @EnvironmentObject var busLocationDAO: BusLocationDAO
-    var busLine:String {busLocationDAO.line}
-    var busATA:String { "1000 min" }
+    @EnvironmentObject var busLocationVM: BusLocationVM
     @State var nomeDaImagem: String = "ConfirmarTrace"
+    var etaString: String {
+        if let shortestETA = busLocationVM.shortestETA {
+            let formatter = DateComponentsFormatter()
+            formatter.unitsStyle = .abbreviated
+            formatter.allowedUnits = [.minute, .second]
+            if let time = formatter.string(from: shortestETA) {
+                return "O \(busLocationVM.trackedLine) chegará em \(time)"
+            }
+            return "Tempo de chegada indisponível."
+        }
+        return "Tempo de chegada indisponível."
+    }
 
     var body: some View {
         ZStack {
@@ -30,7 +40,7 @@ struct ConfirmView: View {
             VStack {
                 Spacer()
 
-                Text("O \(busLocationDAO.line) chegará em \(busLocationDAO.closestBus.etaString ?? "sem ETA")")
+                Text(etaString)
                     .font(.custom("Sylexiad", size: 30))
                     .foregroundColor(.white)
                     .padding(.top, 180)

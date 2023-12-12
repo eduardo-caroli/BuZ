@@ -11,7 +11,7 @@ import SwiftUI
 ///The view presents the bus's line and ETA in minutes and seconds.
 struct StandByView: View {
     
-    @StateObject var vm = BusLocationVM()
+    @EnvironmentObject var vm: BusLocationVM
     var etaText: String {
         if let shortestETA = vm.shortestETA {
             let formatter = DateComponentsFormatter()

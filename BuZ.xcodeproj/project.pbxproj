@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF0A925D28FF208000EC62D9 /* BusLocationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A925C28FF208000EC62D9 /* BusLocationDAO.swift */; };
 		AF180D9F2901E6CE005ECE61 /* Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF180D9E2901E6CE005ECE61 /* Equatable.swift */; };
-		AF1CBC7F29086769004CC865 /* BusLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1CBC7E29086769004CC865 /* BusLocator.swift */; };
-		AF1E1F882903489300582D3A /* etaString.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E1F872903489300582D3A /* etaString.swift */; };
 		AF48D29628EFA3850004599F /* UserLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48D29528EFA3850004599F /* UserLocationViewModel.swift */; };
 		AF48D2A528EFBEEE0004599F /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48D2A428EFBEEE0004599F /* Bus.swift */; };
 		AF6C54FA28EE2C7D005EEE2B /* BuZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C54F928EE2C7D005EEE2B /* BuZApp.swift */; };
@@ -18,9 +15,9 @@
 		AF6C550128EE2C80005EEE2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */; };
 		AF9EFE852B22516800055CBD /* BusLocationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9EFE842B22516800055CBD /* BusLocationVM.swift */; };
 		AFD3127F2909ABB7002E7DAA /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3127E2909ABB7002E7DAA /* Validator.swift */; };
-		AFE0F45A29006B4900533036 /* ETABusLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0F45929006B4900533036 /* ETABusLocator.swift */; };
 		AFFFEA562B23AAC600ED8E6D /* ETA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFEA552B23AAC600ED8E6D /* ETA.swift */; };
 		AFFFEA592B279D8700ED8E6D /* CollectionConcurrencyKit in Frameworks */ = {isa = PBXBuildFile; productRef = AFFFEA582B279D8700ED8E6D /* CollectionConcurrencyKit */; };
+		AFFFEA5C2B28F12600ED8E6D /* ParrotLogger in Frameworks */ = {isa = PBXBuildFile; productRef = AFFFEA5B2B28F12600ED8E6D /* ParrotLogger */; };
 		C00637E029087129008ADEE8 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00637DF29087129008ADEE8 /* Stop.swift */; };
 		C00637E22908716A008ADEE8 /* StopsData.json in Resources */ = {isa = PBXBuildFile; fileRef = C00637E12908716A008ADEE8 /* StopsData.json */; };
 		C00637E429087182008ADEE8 /* ViewModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00637E329087182008ADEE8 /* ViewModelExtensions.swift */; };
@@ -34,10 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AF0A925C28FF208000EC62D9 /* BusLocationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusLocationDAO.swift; sourceTree = "<group>"; };
 		AF180D9E2901E6CE005ECE61 /* Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equatable.swift; sourceTree = "<group>"; };
-		AF1CBC7E29086769004CC865 /* BusLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusLocator.swift; sourceTree = "<group>"; };
-		AF1E1F872903489300582D3A /* etaString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etaString.swift; sourceTree = "<group>"; };
 		AF48D29528EFA3850004599F /* UserLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationViewModel.swift; sourceTree = "<group>"; };
 		AF48D2A428EFBEEE0004599F /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
 		AF63F4B7290A8F440005F17F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -47,7 +41,6 @@
 		AF6C550028EE2C80005EEE2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF9EFE842B22516800055CBD /* BusLocationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusLocationVM.swift; sourceTree = "<group>"; };
 		AFD3127E2909ABB7002E7DAA /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		AFE0F45929006B4900533036 /* ETABusLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETABusLocator.swift; sourceTree = "<group>"; };
 		AFFFEA552B23AAC600ED8E6D /* ETA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETA.swift; sourceTree = "<group>"; };
 		C00637DF29087129008ADEE8 /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		C00637E12908716A008ADEE8 /* StopsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StopsData.json; sourceTree = "<group>"; };
@@ -66,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFFFEA5C2B28F12600ED8E6D /* ParrotLogger in Frameworks */,
 				AFFFEA592B279D8700ED8E6D /* CollectionConcurrencyKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,28 +70,16 @@
 		AF0A925E28FF208600EC62D9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				AF180D9B2901E55B005ECE61 /* BusLocation */,
 				AFD3127E2909ABB7002E7DAA /* Validator.swift */,
 				C00637EB2910429C008ADEE8 /* String2SpeechExtension.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		AF180D9B2901E55B005ECE61 /* BusLocation */ = {
-			isa = PBXGroup;
-			children = (
-				AF0A925C28FF208000EC62D9 /* BusLocationDAO.swift */,
-				AFE0F45929006B4900533036 /* ETABusLocator.swift */,
-				AF1CBC7E29086769004CC865 /* BusLocator.swift */,
-			);
-			path = BusLocation;
-			sourceTree = "<group>";
-		};
 		AF180DA02901E6D5005ECE61 /* Bus */ = {
 			isa = PBXGroup;
 			children = (
 				AF48D2A428EFBEEE0004599F /* Bus.swift */,
-				AF1E1F872903489300582D3A /* etaString.swift */,
 				AF180D9E2901E6CE005ECE61 /* Equatable.swift */,
 			);
 			path = Bus;
@@ -202,6 +184,7 @@
 			name = BuZ;
 			packageProductDependencies = (
 				AFFFEA582B279D8700ED8E6D /* CollectionConcurrencyKit */,
+				AFFFEA5B2B28F12600ED8E6D /* ParrotLogger */,
 			);
 			productName = BuZ;
 			productReference = AF6C54F628EE2C7D005EEE2B /* BuZ.app */;
@@ -233,6 +216,7 @@
 			mainGroup = AF6C54ED28EE2C7D005EEE2B;
 			packageReferences = (
 				AFFFEA572B279D8700ED8E6D /* XCRemoteSwiftPackageReference "CollectionConcurrencyKit" */,
+				AFFFEA5A2B28F12600ED8E6D /* XCRemoteSwiftPackageReference "ParrotLogger" */,
 			);
 			productRefGroup = AF6C54F728EE2C7D005EEE2B /* Products */;
 			projectDirPath = "";
@@ -266,21 +250,17 @@
 				E5DA0E5628F615AA00D99780 /* ConfirmView.swift in Sources */,
 				E59A494329072471001939BE /* HapticsDSL.swift in Sources */,
 				AF48D2A528EFBEEE0004599F /* Bus.swift in Sources */,
-				AF1CBC7F29086769004CC865 /* BusLocator.swift in Sources */,
 				AFFFEA562B23AAC600ED8E6D /* ETA.swift in Sources */,
-				AF0A925D28FF208000EC62D9 /* BusLocationDAO.swift in Sources */,
 				C00637EC2910429C008ADEE8 /* String2SpeechExtension.swift in Sources */,
 				AF48D29628EFA3850004599F /* UserLocationViewModel.swift in Sources */,
 				E5DA0E5928F615AA00D99780 /* WarningNextBus.swift in Sources */,
 				E5DA0E5E28F615AA00D99780 /* QueryBusesView.swift in Sources */,
 				C00637E029087129008ADEE8 /* Stop.swift in Sources */,
-				AF1E1F882903489300582D3A /* etaString.swift in Sources */,
 				AF180D9F2901E6CE005ECE61 /* Equatable.swift in Sources */,
 				E5DA0E5728F615AA00D99780 /* StandByView.swift in Sources */,
 				AF6C54FA28EE2C7D005EEE2B /* BuZApp.swift in Sources */,
 				AFD3127F2909ABB7002E7DAA /* Validator.swift in Sources */,
 				AF9EFE852B22516800055CBD /* BusLocationVM.swift in Sources */,
-				AFE0F45A29006B4900533036 /* ETABusLocator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +477,14 @@
 				minimumVersion = 0.2.0;
 			};
 		};
+		AFFFEA5A2B28F12600ED8E6D /* XCRemoteSwiftPackageReference "ParrotLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Maia-jp/ParrotLogger.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -504,6 +492,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AFFFEA572B279D8700ED8E6D /* XCRemoteSwiftPackageReference "CollectionConcurrencyKit" */;
 			productName = CollectionConcurrencyKit;
+		};
+		AFFFEA5B2B28F12600ED8E6D /* ParrotLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFFFEA5A2B28F12600ED8E6D /* XCRemoteSwiftPackageReference "ParrotLogger" */;
+			productName = ParrotLogger;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

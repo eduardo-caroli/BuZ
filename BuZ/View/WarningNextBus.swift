@@ -12,7 +12,7 @@ import CoreHaptics
 
 struct WarningNextBus: View {
     @Environment(\.dismiss) private var dismiss
-    @EnvironmentObject var busLocationDAO: BusLocationDAO
+    @EnvironmentObject var busLocationVM: BusLocationVM
     @State var nomeDaImagem: String = "Tela6Trace"
     @StateObject var hapticsHandler = HapticsHandler()
 
@@ -63,7 +63,7 @@ struct WarningNextBus: View {
                     }
                 }
             
-            Text ("Fique atento!\n O próximo ônibus\n é o \(busLocationDAO.line)")
+            Text ("Fique atento!\n O próximo ônibus\n é o \(busLocationVM.trackedLine)")
                 .multilineTextAlignment(.center)
                 .foregroundColor(.black)
                 .font(.custom("Sylexiad", size: 30))

@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreLocation
+import ParrotLogger
 
 class Bus: Codable{
     var ordem: String
@@ -27,6 +28,8 @@ class Bus: Codable{
         let clLongitude = CLLocationDegrees(longitude)
         return CLLocation(latitude: clLatitude, longitude: clLongitude)
     }
+    
+    private static let logger = ParrotLogger(category: "Bus fetching on Model side")
 
     
     enum CodingKeys: String, CodingKey {
@@ -77,7 +80,12 @@ class Bus: Codable{
     
     private static func fetchBusDataFromAPI() async -> Data? {
         let session = URLSession(configuration: URLSessionConfiguration.ephemeral)
-        guard let url = URL(string: "https://dados.mobilidade.rio/gps/sppo")
+        let apiFormatter = DateFormatter()
+        apiFormatter.dateFormat = "yyyy-MM-dd+HH:mm:ss"
+        var url = URL(string: "https://dados.mobilidade.rio/gps/sppo?" +
+                      "dataInicial=\(apiFormatter.string(from: Date.now.addingTimeInterval(-30.0)))" +
+                      "&dataFinal=\(apiFormatter.string(from: Date.now))")
+        guard let url
         else { return nil }
         
         let data = await withCheckedContinuation { (continuation: CheckedContinuation<Data?, Never>) in
@@ -103,11 +111,17 @@ class Bus: Codable{
     
     static func fetchFromAPI() async -> [Bus] {
         guard let data = await fetchBusDataFromAPI()
-        else { return [] }
+        else {
+            logger.error("Unable to fetch bus data from API")
+            return []
+        }
+        logger.info("Fetched bus data from API")
         do {
             let buses = try decodeBusData(data)
+            logger.info("Bus data successfully decoded. \(buses.count) buses fetched.")
             return buses
         } catch {
+            logger.error("Unable to decode bnus data.")
             return []
         }
     }

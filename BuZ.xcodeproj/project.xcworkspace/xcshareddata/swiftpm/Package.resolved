@@ -8,6 +8,15 @@
         "revision" : "b4f23e24b5a1bff301efc5e70871083ca029ff95",
         "version" : "0.2.0"
       }
+    },
+    {
+      "identity" : "parrotlogger",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Maia-jp/ParrotLogger.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "0cda245b1a02374a75e83a98cc3adc7fea7a20d7"
+      }
     }
   ],
   "version" : 2
